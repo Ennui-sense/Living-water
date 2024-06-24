@@ -1,0 +1,16 @@
+.link {
+  &__small {
+    font-size: 14px;
+    line-height: 15px;
+    color: var(--color-accent-light);
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}

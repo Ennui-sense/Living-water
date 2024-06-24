@@ -1,0 +1,43 @@
+.close-button {
+  @include reset-button;
+  @include square(40px);
+
+  background-color: var(--color-accent-light);
+  border-radius: var(--border-radius-small);
+  position: relative;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background-color: var(--color-accent-dark);
+    border-radius: 2px;
+  }
+
+  &::before {
+    rotate: 45deg;
+  }
+
+  &::after {
+    rotate: -45deg;
+  }
+
+  &:hover {
+    &::after,
+    &::before {
+      background-color: var(--color-accent);
+    }
+  }
+
+  &:active {
+    &::after,
+    &::before {
+      opacity: 0.6;
+    }
+  }
+}
