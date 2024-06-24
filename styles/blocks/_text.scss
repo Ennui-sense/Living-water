@@ -10,10 +10,16 @@
     line-height: 15px;
   }
 
-  &__medium {
+  &__primary {
     font-size: 16px;
     letter-spacing: -0.02em;
     line-height: 25px;
+  }
+
+  &__medium {
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.02em;
   }
 
   &__large {

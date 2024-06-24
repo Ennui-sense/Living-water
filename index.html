@@ -22,8 +22,7 @@
       <div class="header__bottom-inner container">
         <button class=
                   "header__bottom-button
-                    button
-                    button__menu
+                    menu-button
                     mobile-visible"
                 type="button"
                 onclick="mobileOverlay.showModal()"
@@ -51,19 +50,19 @@
         <nav class="header__bottom-menu mobile-hidden">
           <ul class="header__bottom-menu-list">
             <li class="header__bottom-menu-item">
-              <a href="/" class="header__bottom-menu-link text text__medium">О нас</a>
+              <a href="/" class="header__bottom-menu-link text text__primary">О нас</a>
             </li>
             <li class="header__bottom-menu-item">
-              <a href="/" class="header__bottom-menu-link text text__medium">Каталог</a>
+              <a href="/" class="header__bottom-menu-link text text__primary">Каталог</a>
             </li>
             <li class="header__bottom-menu-item">
-              <a href="/" class="header__bottom-menu-link text text__medium">Отзывы</a>
+              <a href="/" class="header__bottom-menu-link text text__primary">Отзывы</a>
             </li>
             <li class="header__bottom-menu-item">
-              <a href="/" class="header__bottom-menu-link text text__medium">Блог</a>
+              <a href="/" class="header__bottom-menu-link text text__primary">Блог</a>
             </li>
             <li class="header__bottom-menu-item">
-              <a href="/" class="header__bottom-menu-link text text__medium">Контакты</a>
+              <a href="/" class="header__bottom-menu-link text text__primary">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -71,9 +70,8 @@
         <div class="header__bottom-buttons">
           <button class=
                     "header__bottom-button
-                    button
-                    button__menu
-                    button__menu--disabled
+                    menu-button
+                    menu-button__disabled
                     mobile-hidden"
                   type="button"
                   disabled
@@ -86,9 +84,8 @@
 
           <button class=
                     "header__bottom-button
-                    button
-                    button__menu
-                    button__menu--budge"
+                    menu-button
+                    menu-button__budge"
                   type="button"
                   data-title="2"
           >
@@ -103,21 +100,49 @@
   </header>
 
   <main class="content">
-    <section class="section">
-      <div class="section__body hero">
-        <div class="container hero__inner">
-          <div class="hero__body">
-            <h1 class="hero__title">Покупай воду, а не бутылки</h1>
-            <div class="hero__description text text__large">
-              <p>Откройте свой бизнес с аппаратами по продаже питьевой воды с высоким доходом, свободной нишей и низкими рисками</p>
+    <section class="section container">
+      <div class="section__body">
+        <div class="hero">
+          <div class="hero__inner">
+            <div class="hero__body">
+              <h1 class="hero__title">Покупай воду, а не бутылки</h1>
+              <div class="hero__description text text__large">
+                <p>Откройте свой бизнес с аппаратами по продаже питьевой воды с высоким доходом, свободной нишей и низкими рисками</p>
+              </div>
+              <button class="hero__button button button__large text text__primary" type="button">Скачать бизнес-план</button>
             </div>
-            <button class="hero__button button button__large text text__medium" type="button">Скачать бизнес-план</button>
+            <img
+              src="images/hero-img.svg"
+              alt="Дети вместе с мамой набирают воду в нашем аппарате"
+              class="hero__image"
+              width="705" height="685"
+            >
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <header class="section__header">
+        <h2 class="section__title">Береги планету вместе с нами!</h2>
+        <div class="section__info">
+          <div class="section__description text text__primary">
+            <p>
+              У нас своя большая сеть аппаратов из более 300 точек.
+              Используя наш многолетний опыт установки и эксплуатации водоматов,
+              мы поможем вам легко и быстро организовать ваш бизнес
+            </p>
+          </div>
+          <button class="section__button button button__medium text text__primary">Узнать больше</button>
+        </div>
+      </header>
+      <div class="section__body">
+        <div class="about">
           <img
-            src="images/hero-img.svg"
-            alt="Дети вместе с мамой набирают воду в нашем аппарате"
-            class="hero__image"
-            width="705" height="685"
+            src="images/about-img.svg"
+            alt="Наш коллектив"
+            class="about__image"
+            width="1290" height="500" loading="lazy"
           >
         </div>
       </div>

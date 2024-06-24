@@ -27,7 +27,7 @@
     rotate: -45deg;
   }
 
-  &:hover {
+  @include hover {
     &::after,
     &::before {
       background-color: var(--color-accent);

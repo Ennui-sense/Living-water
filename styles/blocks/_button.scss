@@ -4,56 +4,23 @@
   background-color: var(--color-accent);
   color: var(--color-light);
 
-  &__large {
-    border-radius: var(--border-radius);
-    height: var(--button-height-large);
-    padding-inline: 40px;
+  @include hover {
+    background-color: var(--color-accent-dark);
   }
 
-  &__menu {
-    @include square(40px);
-    @include flex-center;
+  &:active {
+      color: rgba(253, 253, 253, 0.6)
+  }
 
-    background-color: var(--color-accent-light);
+  &__medium {
     border-radius: var(--border-radius-small);
+    height: var(--button-height-medium);
+    padding-inline: 30px;
+  }
 
-    &:where(:not(.button__menu--disabled)):hover {
-      svg * {
-        fill: var(--color-accent)
-      }
-    }
-
-    &:where(:not(.button__menu--disabled)):active {
-      svg * {
-        opacity: 0.6;
-      }
-    }
-
-    &--budge {
-      position: relative;
-
-      &::after {
-        @include square(18px);
-        @include flex-center(true);
-
-        content: attr(data-title);
-        position: absolute;
-        top: -6px;
-        right: -4px;
-        font-size: 12px;
-        line-height: 13px;
-        letter-spacing: 0.01em;
-        margin-block: auto;
-        color: var(--color-accent-light);
-        border-radius: 50%;
-        background-color: var(--color-accent-dark);
-      }
-    }
-
-    &--disabled {
-      svg * {
-        opacity: 0.3;
-      }
-    }
+  &__large {
+    border-radius: var(--border-radius-medium);
+    height: var(--button-height-large);
+    padding-inline: 40px;
   }
 }

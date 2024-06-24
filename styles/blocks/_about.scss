@@ -1,0 +1,9 @@
+.about {
+  &__image {
+    width: 100%;
+    min-height: 371px;
+    height: auto;
+    border-radius: var(--border-radius-large);
+    object-fit: cover;
+  }
+}

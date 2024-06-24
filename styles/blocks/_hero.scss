@@ -1,10 +1,10 @@
 .hero {
   @include tablet {
-    padding-block: 75px 120px;
+    padding-block: 75px;
   }
 
   @include mobile {
-    padding-block: 150px 245px;
+    padding-block: 150px;
   }
 
   &__inner {
@@ -32,7 +32,7 @@
 
   &__image {
     max-width: 705px;
-    width: 55%;
+    width: 60%;
     height: auto;
     margin-right: calc(-1 * (1440px - var(--container-width)) / 2);
 
@@ -50,11 +50,11 @@
 
 @media (max-width: 1440px) {
   .hero__image {
-    margin-right: calc(-1 * (100vw - var(--container-width)) / 2);
+    margin-right: calc(-1 * (98.8vw - var(--container-width)) / 2);
   }
 }
 
-@media (max-width: 1340px) {
+@media (max-width: 1339px) {
   .hero__image {
     margin-right: -25px;
   }

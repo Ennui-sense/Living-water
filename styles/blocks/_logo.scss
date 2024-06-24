@@ -7,7 +7,7 @@
   &__link {
     min-width: 178px;
 
-    &:hover {
+    @include hover {
       opacity: 0.6;
     }
 
