@@ -1,16 +1,18 @@
 @import
   "normalize",
   "fonts",
-  "variables",
   "mixins",
   "media",
+  "variables",
   "utils",
   "globals";
 
 @import
+  "blocks/text",
   "blocks/button",
   "blocks/logo",
-  "blocks/link",
-  "blocks/header",
   "blocks/mobile-ovarlay",
-  "blocks/close-button";
+  "blocks/close-button",
+  "blocks/section",
+  "blocks/header",
+  "blocks/hero";

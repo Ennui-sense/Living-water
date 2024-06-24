@@ -1,0 +1,61 @@
+.hero {
+  @include tablet {
+    padding-block: 75px 120px;
+  }
+
+  @include mobile {
+    padding-block: 150px 245px;
+  }
+
+  &__inner {
+    @include flex-sb;
+
+    column-gap: 20px;
+  }
+
+  &__body {
+    max-width: 520px;
+
+    @include tablet {
+      margin-inline: auto;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__description {
+    margin-bottom: 30px;
+  }
+
+  &__image {
+    max-width: 705px;
+    width: 55%;
+    height: auto;
+    margin-right: calc(-1 * (1440px - var(--container-width)) / 2);
+
+    @include desktop {
+      width: 50%;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+// ПРИЖАТИЕ ИЗОБРАЖЕНИЯ К ПРАВОМУ КРАЮ
+
+@media (max-width: 1440px) {
+  .hero__image {
+    margin-right: calc(-1 * (100vw - var(--container-width)) / 2);
+  }
+}
+
+@media (max-width: 1340px) {
+  .hero__image {
+    margin-right: -25px;
+  }
+}

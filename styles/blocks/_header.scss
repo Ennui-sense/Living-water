@@ -13,8 +13,19 @@
     }
 
     &-link {
+      color: var(--color-light);
+      opacity: 0.8;
+
       &:nth-child(2) {
         margin-left: auto;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &:active {
+        opacity: 0.6;
       }
     }
   }
@@ -66,9 +77,6 @@
         @include flex-center(true);
 
         height: 40px;
-        font-size: 16px;
-        line-height: 25px;
-        letter-spacing: -0.02em;
         position: relative;
 
         @include tablet {

@@ -24,12 +24,16 @@
   --container-width: 1290px;
   --container-padding-x: 25px;
 
-  --section-padding-y: 100px;
+  --section-margin: 200px;
   --section-header-margin-bottom: 50px;
 
-  --button-height-large: 65px;
-  --button-height: 55px;
   --button-height-small: 25px;
+  --button-height: 55px;
+  --button-height-large: 65px;
 
   --transition-duration: 0.2s;
+
+  @include mobile {
+    --section-margin: 120px;
+  }
 }

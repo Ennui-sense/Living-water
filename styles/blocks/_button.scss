@@ -1,6 +1,15 @@
 .button {
   @include reset-button;
 
+  background-color: var(--color-accent);
+  color: var(--color-light);
+
+  &__large {
+    border-radius: var(--border-radius);
+    height: var(--button-height-large);
+    padding-inline: 40px;
+  }
+
   &__menu {
     @include square(40px);
     @include flex-center;
