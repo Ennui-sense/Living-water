@@ -12,6 +12,12 @@
       color: rgba(253, 253, 253, 0.6)
   }
 
+  &__small {
+    border-radius: var(--border-radius-small);
+    height: var(--button-height-small);
+    padding-inline: 8px;
+  }
+
   &__medium {
     border-radius: var(--border-radius-small);
     height: var(--button-height-medium);

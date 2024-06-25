@@ -1,16 +1,20 @@
 .wrapper {
   background-color: var(--color-light);
+  color: var(--color-dark);
 
   &__to-bottom {
+    padding-bottom: var(--section-margin);
     border-radius: 0 0 var(--border-radius-x-large) var(--border-radius-x-large);
   }
 
   &__to-up {
+    padding-top: var(--section-margin);
     border-radius: var(--border-radius-x-large) var(--border-radius-x-large) 0 0;
   }
 
   &__gray {
     background-color: var(--color-gray100);
     border-radius: var(--border-radius-x-large);
+    margin-bottom: var(--section-margin);
   }
 }

@@ -1,0 +1,58 @@
+.product-card {
+  &__wrapper {
+    @include flex-center;
+
+    padding: 25px;
+    background-color: var(--color-accent-light);
+    border-radius: var(--border-radius-medium);
+    position: relative;
+
+    @include mobile {
+      padding: 37.5px 16.25px;
+    }
+  }
+
+  &__image {
+    @include mobile {
+      height: 175px;
+      width: 175px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  &__body {
+    padding: 20px 15px 0;
+
+    @include mobile {
+      padding-inline: 10px;
+    }
+  }
+
+  &__inner {
+    max-width: 270px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+  }
+
+  &__cost,
+  &__ruble {
+    font-weight: 600;
+  }
+
+  &__ruble {
+    color: var(--color-gray60);
+  }
+}
