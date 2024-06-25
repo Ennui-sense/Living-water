@@ -1,5 +1,14 @@
 .section {
-  margin-bottom:var(--section-margin);
+  margin-bottom: var(--section-margin);
+
+  &--alt {
+    display: flex;
+    column-gap: 30px;
+  }
+
+  &--padding-from-two-sides {
+    padding-block: var(--section-margin);
+  }
 
   &__header {
     display: flex;
@@ -19,6 +28,13 @@
 
     @include mobile {
       width: 100%;
+    }
+
+    &--alt {
+      flex-direction: column;
+      justify-content: start;
+      row-gap: 25px;
+      min-width: 300px;
     }
   }
 
