@@ -1,0 +1,23 @@
+.benefit-card {
+  padding: 50px 40px 75px;
+  border-radius: var(--border-radius-medium);
+
+  &__icon {
+    @include square(50px);
+    @include flex-center;
+
+    margin-bottom: 30px;
+  }
+
+  &__body {
+    max-width: 363px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    opacity: 0.8;
+  }
+}
