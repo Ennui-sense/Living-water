@@ -18,7 +18,8 @@ a {
   color: inherit;
 }
 
-h1, h2 {
+h1, h2,
+.h1, .h2 {
   font-weight: 600;
 }
 
@@ -26,11 +27,15 @@ h3, h4, h5, h6 {
   font-weight: 500;
 }
 
-h1 {
+h1, .h1 {
   @include fluid-text(64, 50);
 
   line-height: 60px;
   letter-spacing: -0.03em;
+
+  @include mobile {
+    line-height: 45px;
+  }
 }
 
 h2 {

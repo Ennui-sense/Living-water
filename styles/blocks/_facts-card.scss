@@ -1,0 +1,33 @@
+.facts-card {
+  @include flex-sb;
+
+  column-gap: 20px;
+  padding: 65px 50px;
+  background-color: var(--color-accent-light);
+  border-radius: var(--border-radius-medium);
+  color: var(--color-accent-dark);
+
+  @include desktop {
+    padding-inline: 30px;
+  }
+
+  @include tablet {
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: start;
+    padding-block: 35px;
+  }
+
+  @include mobile {
+    padding-block: 50px;
+  }
+
+  &__description {
+    max-width: 200px;
+    opacity: 0.8;
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+}
