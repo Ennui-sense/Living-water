@@ -6,15 +6,19 @@
   background-color: var(--color-accent-light);
   border-radius: var(--border-radius-small);
 
+  &:where(:not(.menu-button--disabled)) {
+    cursor: pointer;
+  }
+
   @include hover {
-    &:where(:not(.menu-button__disabled)) {
+    &:where(:not(.menu-button--disabled)) {
       svg * {
         fill: var(--color-accent);
       }
     }
   }
 
-  &:where(:not(.menu-button__disabled)):active {
+  &:where(:not(.menu-button--disabled)):active {
     svg * {
       opacity: 0.6;
     }
@@ -52,5 +56,19 @@
 
     border: 1px solid var(--color-accent);
     background-color: transparent;
+
+    @include hover {
+      background-color: var(--color-accent-hover);
+
+      svg * {
+        fill: var(--color-light);
+      }
+    }
+
+    &:active {
+      svg * {
+        opacity: 0.6;
+      }
+    }
   }
 }

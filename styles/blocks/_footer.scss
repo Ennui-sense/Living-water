@@ -61,6 +61,20 @@
       flex-direction: column;
       row-gap: 10px;
     }
+
+    &-link {
+      @include flex-center(true);
+
+      height: 32px;
+
+      @include hover {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
   }
 
   &__contacts {

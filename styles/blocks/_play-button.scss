@@ -5,6 +5,11 @@
 
   background-color: var(--color-light);
   border-radius: 50%;
+  cursor: pointer;
+
+  &:active {
+    background-color: hsla(0, 0%, 99%, 0.6);
+  }
 
   &__icon-wrapper {
     @include square(35px);

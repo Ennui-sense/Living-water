@@ -5,6 +5,10 @@
   border-radius: var(--border-radius-medium);
   color: var(--color-accent-dark);
 
+  &:active {
+    opacity: 0.8;
+  }
+
   @include desktop {
     justify-content: normal;
   }
@@ -59,6 +63,12 @@
   &__link {
     @include flex-sb;
 
+    @include hover {
+      opacity: 0.6;
+    }
 
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

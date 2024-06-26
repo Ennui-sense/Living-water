@@ -281,15 +281,16 @@ h3 {
   background-color: transparent;
   background-color: var(--color-accent);
   color: var(--color-light);
+  cursor: pointer;
 }
 @media (hover: hover) {
   .button:hover {
-    background-color: var(--color-accent-dark);
+    background-color: var(--color-accent-hover);
   }
 }
 @media (hover: none) {
   .button:active {
-    background-color: var(--color-accent-dark);
+    background-color: var(--color-accent-hover);
   }
 }
 .button:active {
@@ -323,17 +324,20 @@ h3 {
   background-color: var(--color-accent-light);
   border-radius: var(--border-radius-small);
 }
+.menu-button:where(:not(.menu-button--disabled)) {
+  cursor: pointer;
+}
 @media (hover: hover) {
-  .menu-button:hover:where(:not(.menu-button__disabled)) svg * {
+  .menu-button:hover:where(:not(.menu-button--disabled)) svg * {
     fill: var(--color-accent);
   }
 }
 @media (hover: none) {
-  .menu-button:active:where(:not(.menu-button__disabled)) svg * {
+  .menu-button:active:where(:not(.menu-button--disabled)) svg * {
     fill: var(--color-accent);
   }
 }
-.menu-button:where(:not(.menu-button__disabled)):active svg * {
+.menu-button:where(:not(.menu-button--disabled)):active svg * {
   opacity: 0.6;
 }
 .menu-button__budge {
@@ -365,6 +369,25 @@ h3 {
   aspect-ratio: 1;
   border: 1px solid var(--color-accent);
   background-color: transparent;
+}
+@media (hover: hover) {
+  .menu-button--transparent:hover {
+    background-color: var(--color-accent-hover);
+  }
+  .menu-button--transparent:hover svg * {
+    fill: var(--color-light);
+  }
+}
+@media (hover: none) {
+  .menu-button--transparent:active {
+    background-color: var(--color-accent-hover);
+  }
+  .menu-button--transparent:active svg * {
+    fill: var(--color-light);
+  }
+}
+.menu-button--transparent:active svg * {
+  opacity: 0.6;
 }
 
 .logo {
@@ -508,6 +531,10 @@ h3 {
   align-items: center;
   background-color: var(--color-light);
   border-radius: 50%;
+  cursor: pointer;
+}
+.play-button:active {
+  background-color: hsla(0, 0%, 99%, 0.6);
 }
 .play-button__icon-wrapper {
   width: 35px;
@@ -682,11 +709,6 @@ h3 {
   height: 40px;
   position: relative;
 }
-@media (max-width: 1024px) {
-  .header__bottom-menu-link {
-    font-size: 14px;
-  }
-}
 @media (hover: hover) {
   .header__bottom-menu-link:hover::after {
     content: "";
@@ -715,6 +737,11 @@ h3 {
 }
 .header__bottom-menu-link:active::after {
   background-color: var(--color-accent);
+}
+@media (max-width: 1024px) {
+  .header__bottom-menu-link {
+    font-size: 14px;
+  }
 }
 .header__bottom-buttons {
   display: flex;
@@ -1076,10 +1103,23 @@ h3 {
   left: 0;
   bottom: 0;
   right: 0;
+  min-height: 450px;
+  height: 100%;
+  max-height: 690px;
   border-radius: var(--border-radius-large);
   background-color: hsla(0, 0%, 11%, 0.7);
   background-blend-mode: overlay;
   transition-duration: var(--transition-duration);
+}
+@media (min-width: 1025px) and (hover: hover) {
+  .machine:hover .machine__button {
+    display: flex;
+  }
+}
+@media (min-width: 1025px) and (hover: none) {
+  .machine:active .machine__button {
+    display: flex;
+  }
 }
 @media (hover: hover) {
   .machine:hover::before {
@@ -1110,31 +1150,52 @@ h3 {
   translate: -50% -50%;
   z-index: 2;
 }
+@media (min-width: 1025px) {
+  .machine__button {
+    display: none;
+    opacity: 0.8;
+  }
+}
+@media (min-width: 1025px) and (hover: hover) {
+  .machine__button:hover {
+    opacity: 1;
+  }
+}
+@media (min-width: 1025px) and (hover: none) {
+  .machine__button:active {
+    opacity: 1;
+  }
+}
 
-.reviews__inner {
+.reviews {
+  overflow-y: hidden;
   display: grid;
   grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
   gap: 30px;
   grid-template-areas: "card-1 video-1 video-1 video-1" "video-2 card-2 card-2 card-3" "card-4 card-4 video-3 video-3";
 }
 @media (max-width: 1280px) {
-  .reviews__inner {
+  .reviews {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     grid-template-areas: "card-1 video-1" "video-2 card-2" "card-3 video-3" "card-4 card-4";
   }
 }
 @media (max-width: 767px) {
-  .reviews__inner {
+  .reviews {
     display: flex;
-    align-items: center;
     scroll-snap-type: x mandatory;
     overflow-x: scroll;
   }
 }
 .reviews__card {
-  scroll-snap-align: start;
+  height: 100%;
   min-width: 400px;
+}
+@media (max-width: 767px) {
+  .reviews__card {
+    scroll-snap-align: start;
+  }
 }
 .reviews__card:nth-child(1) {
   grid-area: card-1;
@@ -1207,19 +1268,6 @@ h3 {
   background-blend-mode: overlay;
   transition-duration: var(--transition-duration);
 }
-@media (hover: hover) {
-  .review-video:hover::before {
-    background-color: hsla(0, 0%, 11%, 0.8);
-  }
-}
-@media (hover: none) {
-  .review-video:active::before {
-    background-color: hsla(0, 0%, 11%, 0.8);
-  }
-}
-.review-video:active::before {
-  background-color: hsla(0, 0%, 11%, 0.9);
-}
 .review-video__content {
   width: 100%;
   height: 380px;
@@ -1240,9 +1288,23 @@ h3 {
   top: 50%;
   left: 50%;
   translate: -50% -50%;
+  cursor: pointer;
 }
 .review-video__button svg * {
   fill: var(--color-accent-light);
+}
+@media (hover: hover) {
+  .review-video__button:hover svg * {
+    opacity: 0.6;
+  }
+}
+@media (hover: none) {
+  .review-video__button:active svg * {
+    opacity: 0.6;
+  }
+}
+.review-video__button:active svg * {
+  opacity: 0.3;
 }
 
 .news__list {
@@ -1271,6 +1333,9 @@ h3 {
   background-color: var(--color-accent-light);
   border-radius: var(--border-radius-medium);
   color: var(--color-accent-dark);
+}
+.news-card:active {
+  opacity: 0.8;
 }
 @media (max-width: 1280px) {
   .news-card {
@@ -1328,6 +1393,19 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media (hover: hover) {
+  .news-card__link:hover {
+    opacity: 0.6;
+  }
+}
+@media (hover: none) {
+  .news-card__link:active {
+    opacity: 0.6;
+  }
+}
+.news-card__link:active {
+  opacity: 0.3;
 }
 
 .cta {
@@ -1418,6 +1496,25 @@ h3 {
   flex-direction: column;
   row-gap: 10px;
 }
+.footer__menu-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+}
+@media (hover: hover) {
+  .footer__menu-link:hover {
+    opacity: 0.6;
+  }
+}
+@media (hover: none) {
+  .footer__menu-link:active {
+    opacity: 0.6;
+  }
+}
+.footer__menu-link:active {
+  opacity: 0.3;
+}
 .footer__contacts-body {
   margin-bottom: 40px;
 }
@@ -1502,6 +1599,19 @@ h3 {
   align-items: center;
   width: 20px;
   aspect-ratio: 1;
+}
+@media (hover: hover) {
+  .soc1als__link:hover {
+    opacity: 0.6;
+  }
+}
+@media (hover: none) {
+  .soc1als__link:active {
+    opacity: 0.6;
+  }
+}
+.soc1als__link:active {
+  opacity: 0.3;
 }
 
 /*# sourceMappingURL=style.css.map */
