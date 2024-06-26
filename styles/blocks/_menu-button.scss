@@ -41,9 +41,16 @@
     }
   }
 
-  &__disabled {
+  &--disabled {
     svg * {
       opacity: 0.3;
     }
+  }
+
+  &--transparent {
+    @include square(55px);
+
+    border: 1px solid var(--color-accent);
+    background-color: transparent;
   }
 }

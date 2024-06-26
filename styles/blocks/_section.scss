@@ -66,6 +66,11 @@
   &__info {
     max-width: 520px;
     width: 100%;
+
+    &--alt {
+      display: flex;
+      column-gap: 10px;
+    }
   }
 
   &__description {

@@ -1,0 +1,64 @@
+.news-card {
+  @include flex-center;
+
+  background-color: var(--color-accent-light);
+  border-radius: var(--border-radius-medium);
+  color: var(--color-accent-dark);
+
+  @include desktop {
+    justify-content: normal;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  &__image {
+    height: 300px;
+    min-width: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: var(--border-radius-medium) 0 0 var(--border-radius-medium);
+
+    @include mobile {
+      border-radius: var(--border-radius-medium) var(--border-radius-medium) 0 0;
+    }
+  }
+
+  &__body {
+    padding: 55px 30px;
+
+    @include mobile {
+      padding-block: 50px;
+    }
+  }
+
+  &__info {
+    height: 130px;
+    width: 420px;
+    margin-bottom: 35px;
+
+    @include tablet {
+      width: 100%;
+    }
+
+    @include mobile {
+      margin-bottom: 15px;
+      height: 110px;
+    }
+  }
+
+  &__title {
+    max-width: 360px;
+  }
+
+  &__date {
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    @include flex-sb;
+
+
+  }
+}

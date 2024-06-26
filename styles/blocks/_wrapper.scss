@@ -7,9 +7,9 @@
     border-radius: 0 0 var(--border-radius-x-large) var(--border-radius-x-large);
   }
 
-  &__to-up {
-    padding-top: var(--section-margin);
-    border-radius: var(--border-radius-x-large) var(--border-radius-x-large) 0 0;
+  &__both {
+    padding-block: var(--section-margin);
+    border-radius: var(--border-radius-x-large)
   }
 
   &__gray {
