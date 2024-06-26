@@ -183,7 +183,7 @@ svg * {
 body {
   font-family: var(--font-family-base);
   font-weight: 400;
-  color: var(--color-light);
+  color: var(--color-accent-light);
   background-color: var(--color-accent-dark);
 }
 
@@ -490,6 +490,26 @@ h3 {
   opacity: 0.6;
 }
 
+.play-button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  width: 115px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-light);
+  border-radius: 50%;
+}
+.play-button__icon-wrapper {
+  width: 35px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .section:not(:last-child) {
   margin-bottom: var(--section-margin);
 }
@@ -515,6 +535,7 @@ h3 {
 @media (max-width: 767px) {
   .section__header--mobile-center {
     align-items: center;
+    text-align: center;
   }
 }
 .section__header--alt {
@@ -589,6 +610,7 @@ h3 {
   height: 75px;
   position: relative;
   background-color: var(--color-light);
+  color: var(--color-dark);
 }
 .header__bottom::after {
   content: "";
@@ -1016,6 +1038,52 @@ h3 {
 }
 .product-card__ruble {
   color: var(--color-gray60);
+}
+
+.machine {
+  position: relative;
+  max-height: 690px;
+}
+.machine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: var(--border-radius-large);
+  background-color: hsla(0, 0%, 11%, 0.7);
+  background-blend-mode: overlay;
+  transition-duration: var(--transition-duration);
+}
+@media (hover: hover) {
+  .machine:hover::before {
+    background-color: hsla(0, 0%, 11%, 0.8);
+  }
+}
+@media (hover: none) {
+  .machine:active::before {
+    background-color: hsla(0, 0%, 11%, 0.8);
+  }
+}
+.machine:active::before {
+  background-color: hsla(0, 0%, 11%, 0.9);
+}
+.machine__video {
+  width: 100%;
+  height: auto;
+  min-height: 450px;
+  max-height: 690px;
+  object-fit: cover;
+  border-radius: var(--border-radius-large);
+  z-index: -1;
+}
+.machine__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=style.css.map */

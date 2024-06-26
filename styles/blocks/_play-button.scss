@@ -1,0 +1,13 @@
+.play-button {
+  @include reset-button;
+  @include square(115px);
+  @include flex-center;
+
+  background-color: var(--color-light);
+  border-radius: 50%;
+
+  &__icon-wrapper {
+    @include square(35px);
+    @include flex-center;
+  }
+}

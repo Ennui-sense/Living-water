@@ -33,6 +33,7 @@
     height: 75px;
     position: relative;
     background-color: var(--color-light);
+    color: var(--color-dark);
 
     &::after {
       content: "";

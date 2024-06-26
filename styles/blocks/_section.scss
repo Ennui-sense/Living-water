@@ -26,6 +26,7 @@
     &--mobile-center {
       @include mobile {
         align-items: center;
+        text-align: center;
       }
     }
 
