@@ -3,19 +3,19 @@
   color: var(--color-dark);
 
   &__to-bottom {
-    padding-bottom: var(--section-margin);
+    padding-bottom: calc(var(--section-margin) / 2);
     border-radius: 0 0 var(--border-radius-x-large) var(--border-radius-x-large);
   }
 
   &__both {
-    padding-block: var(--section-margin);
+    padding-block: var(--section-margin) calc(var(--section-margin) / 2);
     border-radius: var(--border-radius-x-large)
   }
 
   &__gray {
     background-color: var(--color-gray100);
     border-radius: var(--border-radius-x-large);
-    padding-block: var(--section-margin);
+    padding-block: var(--section-margin) calc(var(--section-margin) / 2);
     margin-bottom: var(--section-margin);
   }
 }

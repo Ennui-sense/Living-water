@@ -1,6 +1,8 @@
 .section {
-  &:not(:last-child) {
-    margin-bottom: var(--section-margin);
+  margin-bottom: var(--section-margin);
+
+  &:last-child {
+    margin-bottom: calc(var(--section-margin) / 2);
   }
 
   &--alt {

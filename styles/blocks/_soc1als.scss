@@ -1,0 +1,16 @@
+.soc1als {
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  &__item {
+    height: 20px;
+  }
+
+  &__link {
+    @include flex-center(true);
+    @include square(20px);
+  }
+}
