@@ -246,6 +246,7 @@ h3 {
 .wrapper__gray {
   background-color: var(--color-gray100);
   border-radius: var(--border-radius-x-large);
+  padding-block: var(--section-margin);
   margin-bottom: var(--section-margin);
 }
 
@@ -522,8 +523,8 @@ h3 {
     flex-direction: column;
   }
 }
-.section--padding-from-two-sides {
-  padding-block: var(--section-margin);
+.section--margin-top {
+  margin-top: var(--section-margin);
 }
 .section__header {
   display: flex;
@@ -536,6 +537,17 @@ h3 {
   .section__header--mobile-center {
     align-items: center;
     text-align: center;
+  }
+}
+.section__header--space-between {
+  margin-right: 0;
+}
+.section__header--space-between .section__info {
+  text-align: end;
+}
+@media (max-width: 1024px) {
+  .section__header--space-between .section__info {
+    text-align: start;
   }
 }
 .section__header--alt {
@@ -1084,6 +1096,140 @@ h3 {
   left: 50%;
   translate: -50% -50%;
   z-index: 2;
+}
+
+.reviews__inner {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+  gap: 30px;
+  grid-template-areas: "card-1 video-1 video-1 video-1" "video-2 card-2 card-2 card-3" "card-4 card-4 video-3 video-3";
+}
+@media (max-width: 1280px) {
+  .reviews__inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    grid-template-areas: "card-1 video-1" "video-2 card-2" "card-3 video-3" "card-4 card-4";
+  }
+}
+@media (max-width: 767px) {
+  .reviews__inner {
+    display: flex;
+    align-items: center;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+  }
+}
+.reviews__card {
+  scroll-snap-align: start;
+  min-width: 400px;
+}
+.reviews__card:nth-child(1) {
+  grid-area: card-1;
+}
+.reviews__card:nth-child(2) {
+  grid-area: video-1;
+}
+.reviews__card:nth-child(3) {
+  grid-area: video-2;
+}
+.reviews__card:nth-child(4) {
+  grid-area: card-2;
+}
+.reviews__card:nth-child(5) {
+  grid-area: card-3;
+}
+.reviews__card:nth-child(6) {
+  grid-area: card-4;
+}
+.reviews__card:nth-child(7) {
+  grid-area: video-3;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  background-color: var(--color-accent-light);
+  border-radius: var(--border-radius-medium);
+  padding: 55px 40px;
+  height: 380px;
+  color: var(--color-accent-dark);
+}
+.review-card__author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15px;
+}
+.review-card__logo-wrapper {
+  width: 48px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--color-light);
+}
+.review-card__name, .review-card__city {
+  line-height: 20px;
+}
+.review-card__city {
+  opacity: 0.8;
+}
+
+.review-video {
+  position: relative;
+  height: 380px;
+}
+.review-video::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: var(--border-radius-medium);
+  background-color: hsla(0, 0%, 11%, 0.7);
+  background-blend-mode: overlay;
+  transition-duration: var(--transition-duration);
+}
+@media (hover: hover) {
+  .review-video:hover::before {
+    background-color: hsla(0, 0%, 11%, 0.8);
+  }
+}
+@media (hover: none) {
+  .review-video:active::before {
+    background-color: hsla(0, 0%, 11%, 0.8);
+  }
+}
+.review-video:active::before {
+  background-color: hsla(0, 0%, 11%, 0.9);
+}
+.review-video__content {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  object-position: left;
+  border-radius: var(--border-radius-medium);
+}
+.review-video__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  aspect-ratio: 1;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+.review-video__button svg * {
+  fill: var(--color-accent-light);
 }
 
 /*# sourceMappingURL=style.css.map */

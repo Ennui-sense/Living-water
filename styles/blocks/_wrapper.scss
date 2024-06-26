@@ -15,6 +15,7 @@
   &__gray {
     background-color: var(--color-gray100);
     border-radius: var(--border-radius-x-large);
+    padding-block: var(--section-margin);
     margin-bottom: var(--section-margin);
   }
 }

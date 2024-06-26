@@ -12,8 +12,8 @@
     }
   }
 
-  &--padding-from-two-sides {
-    padding-block: var(--section-margin);
+  &--margin-top {
+    margin-top: var(--section-margin);
   }
 
   &__header {
@@ -27,6 +27,18 @@
       @include mobile {
         align-items: center;
         text-align: center;
+      }
+    }
+
+    &--space-between {
+      margin-right: 0;
+
+      .section__info {
+        text-align: end;
+
+        @include tablet {
+          text-align: start;
+        }
       }
     }
 
