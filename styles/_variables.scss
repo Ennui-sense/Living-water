@@ -10,6 +10,8 @@
   --color-gray80: #C0C0C0;
   --color-gray60: #5C5C5C;
   --color-error: #F93232;
+  --color-bg-error: #FFF8F8;
+  --color-outline-error: #F5C4C4;
 
   --font-family-base: "Inter", sans-serif;
 
@@ -31,7 +33,7 @@
   --button-height-medium: 55px;
   --button-height-large: 65px;
 
-  --transition-duration: 0.2s;
+  --transition-duration: 0.4s;
 
   @include mobile {
     --section-margin: 120px;

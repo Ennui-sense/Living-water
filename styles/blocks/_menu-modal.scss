@@ -1,19 +1,45 @@
-.mobile-overlay {
-  height: 100%;
-  width: 50%;
-  margin: 0;
-  padding: 20px 25px;
-  border: none;
+.menu-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, .3);
+  display: flex;
+  justify-content: start;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+          opacity var(--transition-duration),
+          visibility var(--transition-duration);
 
-  &:modal {
-    min-height: 100%;
+  &.open {
+    visibility: visible;
+    opacity: 1;
+
+    .menu-modal__inner {
+      transform: translateX(0);
+    }
+  }
+
+  &__inner {
+    background-color: var(--color-light);
+    height: 100%;
+    width: 40%;
+    margin: 0;
+    padding: 20px 25px;
+    transform: translateX(-100%);
+    transition: transform var(--transition-duration);
+    z-index: 1000;
   }
 
   &__close-button {
     margin-bottom: 50px;
   }
 
-  &__menu {
+  &__navigation {
     &-list {
       display: flex;
       align-items: start;

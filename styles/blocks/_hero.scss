@@ -1,16 +1,15 @@
 .hero {
+  @include flex-sb;
+
+  column-gap: 20px;
+
+
   @include tablet {
     padding-block: 75px;
   }
 
   @include mobile {
     padding-block: 150px;
-  }
-
-  &__inner {
-    @include flex-sb;
-
-    column-gap: 20px;
   }
 
   &__body {

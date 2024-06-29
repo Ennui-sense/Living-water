@@ -9,6 +9,12 @@
     opacity: 0.8;
   }
 
+  @include hover {
+    .news-card__image {
+      background-size: 150%;
+    }
+  }
+
   @include desktop {
     justify-content: normal;
   }
@@ -20,9 +26,13 @@
   &__image {
     height: 300px;
     min-width: 400px;
-    object-fit: cover;
-    object-position: center;
+    width: 100%;
+    //object-fit: cover;
+    //object-position: center;
     border-radius: var(--border-radius-medium) 0 0 var(--border-radius-medium);
+    background: url("../../images/news/1.svg") center/cover no-repeat;
+    background-size: 100%;
+    transition: background-size var(--transition-duration);
 
     @include mobile {
       border-radius: var(--border-radius-medium) var(--border-radius-medium) 0 0;

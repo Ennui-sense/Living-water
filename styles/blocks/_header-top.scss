@@ -1,0 +1,26 @@
+.header-top {
+  padding-block: 15px;
+
+  &__inner {
+    @include flex-sb;
+
+    column-gap: 30px
+  }
+
+  &__link {
+    color: var(--color-light);
+    opacity: 0.8;
+
+    &:nth-child(2) {
+      margin-left: auto;
+    }
+
+    @include hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}

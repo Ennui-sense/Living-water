@@ -8,109 +8,204 @@
   <title>Живая вода</title>
 
   <link rel="stylesheet" href="styles/style.css">
+
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+  <script src="inputmask.min.js" defer></script>
+
+  <script src="scripts.js" defer></script>
 </head>
 <body>
-  <header class="header">
-    <div class="header__top mobile-hidden">
-      <div class="header__top-inner container">
-        <a href="/" class="header__top-link text__small">Доставка и оплата</a>
-        <a href="/" class="header__top-link text__small">Система мониторинга</a>
-        <a href="/" class="header__top-link text__small">8 800 551-90-71</a>
-      </div>
-    </div>
-    <div class="header__bottom">
-      <div class="header__bottom-inner container">
-        <button class=
-                  "header__bottom-button
-                   menu-button
-                   mobile-visible"
-                type="button"
-                onclick="mobileOverlay.showModal()"
-        >
-          <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.170044 0.999998C0.170044 0.541602 0.541648 0.169998 1.00004 0.169998H17C17.4584 0.169998 17.83 0.541602 17.83 0.999998C17.83 1.45839 17.4584 1.83 17 1.83H1.00004C0.541648 1.83 0.170044 1.45839 0.170044 0.999998ZM0.170044 6C0.170044 5.5416 0.541648 5.17 1.00004 5.17H17C17.4584 5.17 17.83 5.5416 17.83 6C17.83 6.45839 17.4584 6.83 17 6.83H1.00004C0.541648 6.83 0.170044 6.45839 0.170044 6ZM0.170044 11C0.170044 10.5416 0.541648 10.17 1.00004 10.17H11.6667C12.1251 10.17 12.4967 10.5416 12.4967 11C12.4967 11.4584 12.1251 11.83 11.6667 11.83H1.00004C0.541648 11.83 0.170044 11.4584 0.170044 11Z" fill="#092C4F"/>
-          </svg>
-          <span class="visually-hidden">Меню</span>
-        </button>
-
-        <div class="header__bottom-logo logo">
-          <a href="/" class="logo__link">
-            <img
-              src="images/logo.svg"
-              alt="Логотип компании 'Живая вода'"
-              class="logo__image"
-              width="178" height="35"
-            >
-          </a>
-          <p class="logo__description mobile-hidden text__x-small">
-            Автоматы по продаже питьевой воды
-          </p>
-        </div>
-
-        <nav class="header__bottom-menu mobile-hidden">
-          <ul class="header__bottom-menu-list">
-            <li class="header__bottom-menu-item">
-              <a href="/" class="header__bottom-menu-link text__primary">О нас</a>
-            </li>
-            <li class="header__bottom-menu-item">
-              <a href="/" class="header__bottom-menu-link text__primary">Каталог</a>
-            </li>
-            <li class="header__bottom-menu-item">
-              <a href="/" class="header__bottom-menu-link text__primary">Отзывы</a>
-            </li>
-            <li class="header__bottom-menu-item">
-              <a href="/" class="header__bottom-menu-link text__primary">Блог</a>
-            </li>
-            <li class="header__bottom-menu-item">
-              <a href="/" class="header__bottom-menu-link text__primary">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="header__bottom-buttons">
-          <button class=
-                    "header__bottom-button
-                    menu-button
-                    menu-button--disabled
-                    mobile-hidden"
-                  type="button"
-                  disabled
-          >
-            <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.99825 0.25C9.41246 0.25 9.74825 0.585786 9.74825 1V2.1261L13.9983 3.54276L16.2611 2.78849C16.654 2.6575 17.0788 2.86987 17.2098 3.26283C17.3407 3.65579 17.1284 4.08053 16.7354 4.21151L14.9469 4.80768L17.1977 11.56C17.3177 11.8662 17.2249 12.2266 16.949 12.4334C16.0978 13.0716 15.0626 13.4166 13.9987 13.4166C12.9348 13.4166 11.8996 13.0716 11.0484 12.4334C10.79 12.2397 10.6846 11.9025 10.7867 11.5962L13.0496 4.80768L9.74825 3.70724V15.25H11.4983C11.9125 15.25 12.2482 15.5858 12.2482 16C12.2482 16.4142 11.9125 16.75 11.4983 16.75H6.49825C6.08404 16.75 5.74825 16.4142 5.74825 16C5.74825 15.5858 6.08404 15.25 6.49825 15.25H8.24825V3.70724L4.94693 4.80768L7.19772 11.56C7.31768 11.8662 7.22486 12.2266 6.94898 12.4334C6.09776 13.0716 5.06255 13.4166 3.99867 13.4166C2.93478 13.4166 1.89958 13.0716 1.04836 12.4334C0.790025 12.2397 0.684637 11.9025 0.786738 11.5962L3.04957 4.80768L1.26108 4.21151C0.868122 4.08053 0.655752 3.65579 0.786738 3.26283C0.917724 2.86987 1.34246 2.6575 1.73542 2.78849L3.99825 3.54276L8.24825 2.1261V1C8.24825 0.585786 8.58404 0.25 8.99825 0.25ZM3.99825 6.70504L2.39436 11.5167C2.886 11.778 3.43657 11.9166 3.99867 11.9166C4.56049 11.9166 5.11081 11.7781 5.60227 11.5171L3.99825 6.70504ZM13.9983 6.70504L12.3944 11.5167C12.886 11.778 13.4366 11.9166 13.9987 11.9166C14.5605 11.9166 15.1108 11.7781 15.6023 11.5171L13.9983 6.70504Z" fill="#092C4F"/>
-            </svg>
-            <span class="visually-hidden">Сравнения</span>
-          </button>
-
-          <button class=
-                    "header__bottom-button
-                    menu-button
-                    menu-button__budge"
-                  type="button"
-                  data-title="2"
-          >
-            <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.66671 0.166664C1.20647 0.166664 0.833374 0.53976 0.833374 0.999997C0.833374 1.46023 1.20647 1.83333 1.66671 1.83333H2.68335L3.35346 4.51624L4.74789 11.4901C4.86122 12.057 5.16753 12.5671 5.61468 12.9336C6.06177 13.3 6.62233 13.5001 7.20038 13.5H15.1584C15.7784 13.5 16.3762 13.2696 16.8359 12.8536C17.2955 12.4376 17.5842 11.8656 17.6459 11.2487L18.1459 6.24875C18.1807 5.90121 18.1422 5.55024 18.033 5.21847C17.9238 4.8867 17.7463 4.58149 17.512 4.32252C17.2776 4.06354 16.9916 3.85655 16.6723 3.71488C16.3531 3.57321 16.0077 3.50001 15.6584 3.5H4.8175L4.30006 1.42833C4.20978 1.06792 4.00165 0.748012 3.70874 0.519423C3.41583 0.290834 3.05492 0.166674 2.68337 0.166664H1.66671ZM6.66671 15.1667C6.20647 15.1667 5.83337 15.5398 5.83337 16C5.83337 16.4602 6.20647 16.8333 6.66671 16.8333H8.33337C8.79361 16.8333 9.16671 16.4602 9.16671 16C9.16671 15.5398 8.79361 15.1667 8.33337 15.1667H6.66671ZM13.3334 15.1667C12.8731 15.1667 12.5 15.5398 12.5 16C12.5 16.4602 12.8731 16.8333 13.3334 16.8333H15C15.4603 16.8333 15.8334 16.4602 15.8334 16C15.8334 15.5398 15.4603 15.1667 15 15.1667H13.3334ZM6.38221 11.1633L5.18317 5.16666H15.6584C15.7748 5.16667 15.8899 5.19107 15.9963 5.23829C16.1027 5.28551 16.1981 5.35451 16.2762 5.44084C16.3543 5.52716 16.4135 5.6289 16.4499 5.73949C16.4863 5.85008 16.4991 5.96707 16.4875 6.08291L15.9875 11.0829C15.967 11.2885 15.8707 11.4792 15.7175 11.6179C15.5643 11.7565 15.365 11.8333 15.1584 11.8333H7.19972C7.007 11.8334 6.82021 11.7667 6.67115 11.6445C6.5221 11.5224 6.41998 11.3523 6.38221 11.1633Z" fill="#092C4F"/>
-            </svg>
-            <span class="visually-hidden">Корзина</span>
-          </button>
-        </div>
-      </div>
+  <header class="header-top mobile-hidden" id="header">
+    <div class="header-top__inner container">
+      <a href="/" class="header-top__link text__small">Доставка и оплата</a>
+      <a href="/" class="header-top__link text__small">Система мониторинга</a>
+      <a href="/" class="header-top__link text__small">8 800 551-90-71</a>
     </div>
   </header>
+
+  <div class="header-bottom">
+    <div class="header-bottom__inner container">
+      <button class=
+                "header-bottom__button
+                 menu-button
+                 mobile-visible"
+              type="button"
+      >
+        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.170044 0.999998C0.170044 0.541602 0.541648 0.169998 1.00004 0.169998H17C17.4584 0.169998 17.83 0.541602 17.83 0.999998C17.83 1.45839 17.4584 1.83 17 1.83H1.00004C0.541648 1.83 0.170044 1.45839 0.170044 0.999998ZM0.170044 6C0.170044 5.5416 0.541648 5.17 1.00004 5.17H17C17.4584 5.17 17.83 5.5416 17.83 6C17.83 6.45839 17.4584 6.83 17 6.83H1.00004C0.541648 6.83 0.170044 6.45839 0.170044 6ZM0.170044 11C0.170044 10.5416 0.541648 10.17 1.00004 10.17H11.6667C12.1251 10.17 12.4967 10.5416 12.4967 11C12.4967 11.4584 12.1251 11.83 11.6667 11.83H1.00004C0.541648 11.83 0.170044 11.4584 0.170044 11Z" fill="#092C4F"/>
+        </svg>
+        <span class="visually-hidden">Меню</span>
+      </button>
+
+      <div class="menu-modal">
+        <div class="menu-modal__inner">
+           <button class="menu-modal__close-button close-button" type="submit">
+             <span class="visually-hidden">Закрыть меню</span>
+           </button>
+
+          <div class="menu-modal__body">
+            <nav class="menu-modal__navigation">
+              <ul class="menu-modal__navigation-list">
+                <li class="menu-modal__navigation-item">
+                  <a href="/" class="menu-modal__navigation-link">О нас</a>
+                </li>
+                <li class="menu-modal__navigation-item">
+                  <a href="/" class="menu-modal__navigation-link">Каталог</a>
+                </li>
+                <li class="menu-modal__navigation-item">
+                  <a href="/" class="menu-modal__navigation-link">Отзывы</a>
+                </li>
+                <li class="menu-modal__navigation-item">
+                  <a href="/" class="menu-modal__navigation-link">Блог</a>
+                </li>
+                <li class="menu-modal__navigation-item">
+                  <a href="/" class="menu-modal__navigation-link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-bottom__logo logo">
+        <a href="/" class="logo__link">
+          <img
+            src="images/logo.svg"
+            alt="Логотип компании 'Живая вода'"
+            class="logo__image"
+            width="178" height="35"
+          >
+        </a>
+        <p class="logo__description mobile-hidden text__x-small">
+          Автоматы по продаже питьевой воды
+        </p>
+      </div>
+      <nav class="header-bottom__menu mobile-hidden">
+        <ul class="header-bottom__menu-list">
+          <li class="header-bottom__menu-item">
+            <a href="/" class="header-bottom__menu-link text__primary">О нас</a>
+          </li>
+          <li class="header-bottom__menu-item">
+            <a href="/" class="header-bottom__menu-link text__primary">Каталог</a>
+          </li>
+          <li class="header-bottom__menu-item">
+            <a href="/" class="header-bottom__menu-link text__primary">Отзывы</a>
+          </li>
+          <li class="header-bottom__menu-item">
+            <a href="/" class="header-bottom__menu-link text__primary">Блог</a>
+          </li>
+          <li class="header-bottom__menu-item">
+            <a href="/" class="header-bottom__menu-link text__primary">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-bottom__buttons">
+        <button class=
+                  "header-bottom__button
+                   menu-button
+                   menu-button--disabled
+                   mobile-hidden"
+                type="button"
+                disabled
+        >
+          <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.99825 0.25C9.41246 0.25 9.74825 0.585786 9.74825 1V2.1261L13.9983 3.54276L16.2611 2.78849C16.654 2.6575 17.0788 2.86987 17.2098 3.26283C17.3407 3.65579 17.1284 4.08053 16.7354 4.21151L14.9469 4.80768L17.1977 11.56C17.3177 11.8662 17.2249 12.2266 16.949 12.4334C16.0978 13.0716 15.0626 13.4166 13.9987 13.4166C12.9348 13.4166 11.8996 13.0716 11.0484 12.4334C10.79 12.2397 10.6846 11.9025 10.7867 11.5962L13.0496 4.80768L9.74825 3.70724V15.25H11.4983C11.9125 15.25 12.2482 15.5858 12.2482 16C12.2482 16.4142 11.9125 16.75 11.4983 16.75H6.49825C6.08404 16.75 5.74825 16.4142 5.74825 16C5.74825 15.5858 6.08404 15.25 6.49825 15.25H8.24825V3.70724L4.94693 4.80768L7.19772 11.56C7.31768 11.8662 7.22486 12.2266 6.94898 12.4334C6.09776 13.0716 5.06255 13.4166 3.99867 13.4166C2.93478 13.4166 1.89958 13.0716 1.04836 12.4334C0.790025 12.2397 0.684637 11.9025 0.786738 11.5962L3.04957 4.80768L1.26108 4.21151C0.868122 4.08053 0.655752 3.65579 0.786738 3.26283C0.917724 2.86987 1.34246 2.6575 1.73542 2.78849L3.99825 3.54276L8.24825 2.1261V1C8.24825 0.585786 8.58404 0.25 8.99825 0.25ZM3.99825 6.70504L2.39436 11.5167C2.886 11.778 3.43657 11.9166 3.99867 11.9166C4.56049 11.9166 5.11081 11.7781 5.60227 11.5171L3.99825 6.70504ZM13.9983 6.70504L12.3944 11.5167C12.886 11.778 13.4366 11.9166 13.9987 11.9166C14.5605 11.9166 15.1108 11.7781 15.6023 11.5171L13.9983 6.70504Z" fill="#092C4F"/>
+          </svg>
+          <span class="visually-hidden">Сравнения</span>
+        </button>
+        <button class=
+                  "header-bottom__button
+                   menu-button
+                   menu-button__budge"
+                type="button"
+                data-title="2"
+        >
+          <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.66671 0.166664C1.20647 0.166664 0.833374 0.53976 0.833374 0.999997C0.833374 1.46023 1.20647 1.83333 1.66671 1.83333H2.68335L3.35346 4.51624L4.74789 11.4901C4.86122 12.057 5.16753 12.5671 5.61468 12.9336C6.06177 13.3 6.62233 13.5001 7.20038 13.5H15.1584C15.7784 13.5 16.3762 13.2696 16.8359 12.8536C17.2955 12.4376 17.5842 11.8656 17.6459 11.2487L18.1459 6.24875C18.1807 5.90121 18.1422 5.55024 18.033 5.21847C17.9238 4.8867 17.7463 4.58149 17.512 4.32252C17.2776 4.06354 16.9916 3.85655 16.6723 3.71488C16.3531 3.57321 16.0077 3.50001 15.6584 3.5H4.8175L4.30006 1.42833C4.20978 1.06792 4.00165 0.748012 3.70874 0.519423C3.41583 0.290834 3.05492 0.166674 2.68337 0.166664H1.66671ZM6.66671 15.1667C6.20647 15.1667 5.83337 15.5398 5.83337 16C5.83337 16.4602 6.20647 16.8333 6.66671 16.8333H8.33337C8.79361 16.8333 9.16671 16.4602 9.16671 16C9.16671 15.5398 8.79361 15.1667 8.33337 15.1667H6.66671ZM13.3334 15.1667C12.8731 15.1667 12.5 15.5398 12.5 16C12.5 16.4602 12.8731 16.8333 13.3334 16.8333H15C15.4603 16.8333 15.8334 16.4602 15.8334 16C15.8334 15.5398 15.4603 15.1667 15 15.1667H13.3334ZM6.38221 11.1633L5.18317 5.16666H15.6584C15.7748 5.16667 15.8899 5.19107 15.9963 5.23829C16.1027 5.28551 16.1981 5.35451 16.2762 5.44084C16.3543 5.52716 16.4135 5.6289 16.4499 5.73949C16.4863 5.85008 16.4991 5.96707 16.4875 6.08291L15.9875 11.0829C15.967 11.2885 15.8707 11.4792 15.7175 11.6179C15.5643 11.7565 15.365 11.8333 15.1584 11.8333H7.19972C7.007 11.8334 6.82021 11.7667 6.67115 11.6445C6.5221 11.5224 6.41998 11.3523 6.38221 11.1633Z" fill="#092C4F"/>
+          </svg>
+          <span class="visually-hidden">Корзина</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
 
   <main class="content">
     <div class="wrapper wrapper__to-bottom">
       <section class="section container">
         <div class="section__body">
           <div class="hero">
-            <div class="hero__inner">
               <div class="hero__body">
                 <h1 class="hero__title">Покупай воду, а не бутылки</h1>
                 <p class="hero__description text__large">
                   Откройте свой бизнес с аппаратами по продаже питьевой воды с высоким доходом, свободной нишей и низкими рисками
                 </p>
-                <button class="hero__button button button__large text__primary" type="button">Скачать бизнес-план</button>
+                <button
+                  class="hero__button button button__large text__primary download__button"
+                  type="button"
+                >
+                  Скачать бизнес-план
+                </button>
+
+                <div class="plan-modal">
+                  <div class="plan-modal__inner">
+                    <button class="plan-modal__close-button">
+                      <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.814539 0.314551C1.07489 0.0542011 1.497 0.0542011 1.75735 0.314551L5.99999 4.55719L10.2426 0.314551C10.503 0.0542011 10.9251 0.0542007 11.1854 0.314551C11.4458 0.5749 11.4458 0.99701 11.1854 1.25736L6.9428 5.5L11.1854 9.74264C11.4458 10.003 11.4458 10.4251 11.1854 10.6854C10.9251 10.9458 10.503 10.9458 10.2426 10.6854L5.99999 6.44281L1.75735 10.6854C1.497 10.9458 1.07489 10.9458 0.814539 10.6854C0.554189 10.4251 0.554189 10.003 0.814539 9.74264L5.05718 5.5L0.814539 1.25736C0.554189 0.99701 0.554189 0.5749 0.814539 0.314551Z" fill="#C0C0C0"/>
+                      </svg>
+
+                      <span class="visually-hidden">Кнопка закрытия</span>
+                    </button>
+
+                    <div class="plan-modal__text">
+                      <p class="plan-modal__title h2">Получите наш бизнес-план</p>
+                      <p class="plan-modal__description text__primary">Заполните форму, чтобы скачать бизнес-план</p>
+                    </div>
+
+                    <form action="" class="plan-modal__form" id="plan-modal-form" method="get">
+                      <div class="plan-modal__form-inputs">
+                        <div class="just-validate-error-wrapper">
+                          <label for="name" class="plan-modal__form-title visually-hidden">Имя пользователя</label>
+                          <input
+                            type="text"
+                            class="plan-modal__form-input text__small"
+                            id="name"
+                            placeholder="Имя"
+                          >
+                        </div>
+
+                        <div class="just-validate-error-wrapper">
+                          <label for="email" class="plan-modal__form-title visually-hidden">Электронная почта</label>
+                          <input
+                            type="email"
+                            class="plan-modal__form-input text__small"
+                            id="email"
+                            placeholder="Электронная почта"
+                          >
+                        </div>
+
+                        <div class="just-validate-error-wrapper">
+                          <label for="tel" class="plan-modal__form-title visually-hidden">Номер телефона</label>
+                          <input
+                            type="tel"
+                            class="plan-modal__form-input text__small"
+                            id="tel"
+                            placeholder="+7 932 999-99-99"
+                          >
+                        </div>
+                      </div>
+
+                      <a href="text.txt" download="" id="download-file" class="visually-hidden"></a>
+                      <button type="submit" class="plan-modal__form-button button button__medium" onload="downloadPlan()">
+                        Скачать
+                      </button>
+
+
+<!--                      <input type="button" class="plan-modal__form-button button button__medium" data-path="text.txt">-->
+                    </form>
+                  </div>
+                </div>
               </div>
               <img
                 src="images/hero-img.svg"
@@ -118,8 +213,8 @@
                 class="hero__image"
                 width="705" height="685"
               >
+
             </div>
-          </div>
         </div>
       </section>
 
@@ -769,6 +864,42 @@
 
               <span class="visually-hidden">Подписка на наши новости</span>
             </button>
+
+            <div class="subscribe-modal">
+              <div class="subscribe-modal__inner">
+                <button class="subscribe-modal__close-button">
+                  <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.814539 0.314551C1.07489 0.0542011 1.497 0.0542011 1.75735 0.314551L5.99999 4.55719L10.2426 0.314551C10.503 0.0542011 10.9251 0.0542007 11.1854 0.314551C11.4458 0.5749 11.4458 0.99701 11.1854 1.25736L6.9428 5.5L11.1854 9.74264C11.4458 10.003 11.4458 10.4251 11.1854 10.6854C10.9251 10.9458 10.503 10.9458 10.2426 10.6854L5.99999 6.44281L1.75735 10.6854C1.497 10.9458 1.07489 10.9458 0.814539 10.6854C0.554189 10.4251 0.554189 10.003 0.814539 9.74264L5.05718 5.5L0.814539 1.25736C0.554189 0.99701 0.554189 0.5749 0.814539 0.314551Z" fill="#C0C0C0"/>
+                  </svg>
+
+                  <span class="visually-hidden">Кнопка закрытия</span>
+                </button>
+
+                <div class="subscribe-modal__text">
+                  <p class="subscribe-modal__title h2">Подпишитесь на рассылку</p>
+                  <p class="subscribe-modal__description text__primary">Заполните форму, чтобы подписаться на рассылку самых свежих новостей</p>
+                </div>
+
+                <form action="https://echo.htmlacademy.ru" class="subscribe-modal__form" id="subscribe-modal-form">
+                  <div class="subscribe-modal__form-inputs">
+                    <div class="just-validate-error-wrapper">
+                      <label for="subscribe-email" class="subscribe-modal__form-title visually-hidden">Электронная почта</label>
+                      <input
+                        type="text"
+                        class="subscribe-modal__form-input text__small"
+                        id="subscribe-email"
+                        placeholder="Электронная почта"
+                        required
+                      >
+                    </div>
+                  </div>
+
+                  <button type="submit" class="subscribe-modal__form-button button button__medium" onload="downloadPlan()">
+                    Подписаться
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
         </header>
 
@@ -777,12 +908,13 @@
             <ul class="news__list">
               <li class="news__item">
                 <article class="news__card news-card">
-                  <img
-                    src="images/news/1.svg"
-                    alt='Министр оценивает "Живую воду"'
-                    class="news-card__image"
-                    width="480" height="300" loading="lazy"
-                  >
+                  <div class="news-card__image"></div>
+<!--                  <img-->
+<!--                    src="images/news/1.svg"-->
+<!--                    alt='Министр оценивает "Живую воду"'-->
+<!--                    class="news-card__image"-->
+<!--                    width="480" height="300" loading="lazy"-->
+<!--                  >-->
 
                   <div class="news-card__body">
                     <div class="news-card__info">
@@ -862,11 +994,12 @@
             Начни бизнес<br>
             с Живой водой
           </p>
-          <button class="button button__medium text__medium">Начать бизнес</button>
+          <button class="button button__medium text__medium download__button">Начать бизнес</button>
         </div>
       </div>
     </section>
   </main>
+
 
 
   <footer class="footer container text__primary">
@@ -976,34 +1109,11 @@
       </div>
     </div>
   </footer>
-  <dialog class="mobile-overlay mobile-visible" id="mobileOverlay">
-    <form action="" class="mobile-overlay__close-button-wrapper" method="dialog">
-      <button class="mobile-overlay__close-button close-button" type="submit">
-        <span class="visually-hidden">Закрыть меню</span>
-      </button>
-    </form>
 
-    <div class="mobile-overlay__body">
-      <nav class="mobile-overlay__menu">
-        <ul class="mobile-overlay__menu-list">
-          <li class="mobile-overlay__menu-item">
-            <a href="/" class="mobile-overlay__menu-link">О нас</a>
-          </li>
-          <li class="mobile-overlay__menu-item">
-            <a href="/" class="mobile-overlay__menu-link">Каталог</a>
-          </li>
-          <li class="mobile-overlay__menu-item">
-            <a href="/" class="mobile-overlay__menu-link">Отзывы</a>
-          </li>
-          <li class="mobile-overlay__menu-item">
-            <a href="/" class="mobile-overlay__menu-link">Блог</a>
-          </li>
-          <li class="mobile-overlay__menu-item">
-            <a href="/" class="mobile-overlay__menu-link">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </dialog>
+  <a class="back-to-top-button" id="back-to-top-button" href="#header">
+    <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.820352 10.9296C0.393216 10.5025 0.393216 9.80999 0.820352 9.38285L9.57035 0.632851C9.67522 0.527985 9.79608 0.448866 9.92508 0.395491C10.0521 0.342802 10.1913 0.313375 10.3372 0.312517C10.3394 0.312506 10.3416 0.3125 10.3438 0.3125C10.3459 0.3125 10.3481 0.312506 10.3503 0.312517C10.4962 0.313375 10.6354 0.342802 10.7624 0.395491C10.8914 0.448866 11.0123 0.527985 11.1171 0.632851L19.8671 9.38285C20.2943 9.80999 20.2943 10.5025 19.8671 10.9296C19.44 11.3568 18.7475 11.3568 18.3204 10.9296L11.4375 4.04679L11.4375 21.4062C11.4375 22.0103 10.9478 22.5 10.3438 22.5C9.73969 22.5 9.25 22.0103 9.25 21.4062L9.25 4.04679L2.36715 10.9296C1.94001 11.3568 1.24749 11.3568 0.820352 10.9296Z" fill="#5C5C5C"/>
+    </svg>
+  </a>
 </body>
 </html>
