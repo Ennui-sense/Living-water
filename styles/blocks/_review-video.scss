@@ -2,6 +2,19 @@
   position: relative;
   height: 380px;
 
+  @include hover {
+    svg * {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    svg * {
+      opacity: 0.3;
+    }
+  }
+
+  //Слой для затемнения
   &::before {
     content: "";
     position: absolute;
@@ -36,18 +49,6 @@
 
     svg * {
       fill: var(--color-accent-light);
-    }
-
-    @include hover {
-      svg * {
-        opacity: 0.6;
-      }
-    }
-
-    &:active {
-      svg * {
-        opacity: 0.3;
-      }
     }
   }
 }

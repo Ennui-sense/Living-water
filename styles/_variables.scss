@@ -33,7 +33,11 @@
   --button-height-medium: 55px;
   --button-height-large: 65px;
 
+  --select-height: 35px;
+
   --transition-duration: 0.4s;
+  --transition-duration-long: 0.8s;
+
 
   @include mobile {
     --section-margin: 120px;

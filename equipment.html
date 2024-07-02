@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Оборудование</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"
+  />
+
+  <link rel="stylesheet" href="styles/style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js" defer></script>
+
+  <script src="scripts/equipment.js" defer></script>
+</head>
+<body>
+  <header class="header-top mobile-hidden">
+    <div class="header-top__inner container">
+      <a href="/" class="header-top__link text__small">Доставка и оплата</a>
+      <a href="/" class="header-top__link text__small">Система мониторинга</a>
+      <a href="/" class="header-top__link text__small">8 800 551-90-71</a>
+    </div>
+  </header>
+
+  <div class="header-bottom">
+    <div class="header-bottom__inner container">
+      <button class=
+                "header-bottom__button
+                 menu-button
+                 mobile-visible
+                 menu-modal__open-button"
+              type="button"
+      >
+        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.170044 0.999998C0.170044 0.541602 0.541648 0.169998 1.00004 0.169998H17C17.4584 0.169998 17.83 0.541602 17.83 0.999998C17.83 1.45839 17.4584 1.83 17 1.83H1.00004C0.541648 1.83 0.170044 1.45839 0.170044 0.999998ZM0.170044 6C0.170044 5.5416 0.541648 5.17 1.00004 5.17H17C17.4584 5.17 17.83 5.5416 17.83 6C17.83 6.45839 17.4584 6.83 17 6.83H1.00004C0.541648 6.83 0.170044 6.45839 0.170044 6ZM0.170044 11C0.170044 10.5416 0.541648 10.17 1.00004 10.17H11.6667C12.1251 10.17 12.4967 10.5416 12.4967 11C12.4967 11.4584 12.1251 11.83 11.6667 11.83H1.00004C0.541648 11.83 0.170044 11.4584 0.170044 11Z" fill="#092C4F"/>
+        </svg>
+        <span class="visually-hidden">Меню</span>
+      </button>
+
+      <div class="menu-modal modal">
+        <div class="menu-modal__inner">
+          <button class="menu-modal__close-button modal__button-close" type="submit">
+            <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.814539 0.314551C1.07489 0.0542011 1.497 0.0542011 1.75735 0.314551L5.99999 4.55719L10.2426 0.314551C10.503 0.0542011 10.9251 0.0542007 11.1854 0.314551C11.4458 0.5749 11.4458 0.99701 11.1854 1.25736L6.9428 5.5L11.1854 9.74264C11.4458 10.003 11.4458 10.4251 11.1854 10.6854C10.9251 10.9458 10.503 10.9458 10.2426 10.6854L5.99999 6.44281L1.75735 10.6854C1.497 10.9458 1.07489 10.9458 0.814539 10.6854C0.554189 10.4251 0.554189 10.003 0.814539 9.74264L5.05718 5.5L0.814539 1.25736C0.554189 0.99701 0.554189 0.5749 0.814539 0.314551Z" fill="#C0C0C0"/>
+            </svg>
+
+            <span class="visually-hidden">Кнопка закрытия</span>
+          </button>
+
+          <nav class="menu-modal__navigation">
+            <ul class="menu-modal__navigation-list">
+              <li class="menu-modal__navigation-item">
+                <a href="/" class="menu-modal__navigation-link">О нас</a>
+              </li>
+              <li class="menu-modal__navigation-item">
+                <a href="/" class="menu-modal__navigation-link">Каталог</a>
+              </li>
+              <li class="menu-modal__navigation-item">
+                <a href="/" class="menu-modal__navigation-link">Отзывы</a>
+              </li>
+              <li class="menu-modal__navigation-item">
+                <a href="/" class="menu-modal__navigation-link">Блог</a>
+              </li>
+              <li class="menu-modal__navigation-item">
+                <a href="/" class="menu-modal__navigation-link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="header-bottom__logo logo">
+        <a href="index.html" class="logo__link">
+          <img
+            src="images/logo.svg"
+            alt="Логотип компании 'Живая вода'"
+            class="logo__image"
+            width="178" height="35"
+          >
+        </a>
+        <p class="logo__description mobile-hidden text__x-small">
+          Автоматы по продаже питьевой воды
+        </p>
+      </div>
+      <nav class="header-bottom__menu mobile-hidden">
+        <ul class="header-bottom__menu-list">
+          <li class="header-bottom__menu-item">
+            <a href="/" class="header-bottom__menu-link text__primary">О нас</a>
+          </li>
+          <li class="header-bottom__menu-item">
+            <a href="/" class="header-bottom__menu-link text__primary">Каталог</a>
+          </li>
+          <li class="header-bottom__menu-item">
+            <a href="/" class="header-bottom__menu-link text__primary">Отзывы</a>
+          </li>
+          <li class="header-bottom__menu-item">
+            <a href="/" class="header-bottom__menu-link text__primary">Блог</a>
+          </li>
+          <li class="header-bottom__menu-item">
+            <a href="/" class="header-bottom__menu-link text__primary">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-bottom__buttons">
+        <button class=
+                  "header-bottom__button
+                   menu-button
+                   menu-button--disabled
+                   mobile-hidden"
+                type="button"
+                disabled
+        >
+          <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.99825 0.25C9.41246 0.25 9.74825 0.585786 9.74825 1V2.1261L13.9983 3.54276L16.2611 2.78849C16.654 2.6575 17.0788 2.86987 17.2098 3.26283C17.3407 3.65579 17.1284 4.08053 16.7354 4.21151L14.9469 4.80768L17.1977 11.56C17.3177 11.8662 17.2249 12.2266 16.949 12.4334C16.0978 13.0716 15.0626 13.4166 13.9987 13.4166C12.9348 13.4166 11.8996 13.0716 11.0484 12.4334C10.79 12.2397 10.6846 11.9025 10.7867 11.5962L13.0496 4.80768L9.74825 3.70724V15.25H11.4983C11.9125 15.25 12.2482 15.5858 12.2482 16C12.2482 16.4142 11.9125 16.75 11.4983 16.75H6.49825C6.08404 16.75 5.74825 16.4142 5.74825 16C5.74825 15.5858 6.08404 15.25 6.49825 15.25H8.24825V3.70724L4.94693 4.80768L7.19772 11.56C7.31768 11.8662 7.22486 12.2266 6.94898 12.4334C6.09776 13.0716 5.06255 13.4166 3.99867 13.4166C2.93478 13.4166 1.89958 13.0716 1.04836 12.4334C0.790025 12.2397 0.684637 11.9025 0.786738 11.5962L3.04957 4.80768L1.26108 4.21151C0.868122 4.08053 0.655752 3.65579 0.786738 3.26283C0.917724 2.86987 1.34246 2.6575 1.73542 2.78849L3.99825 3.54276L8.24825 2.1261V1C8.24825 0.585786 8.58404 0.25 8.99825 0.25ZM3.99825 6.70504L2.39436 11.5167C2.886 11.778 3.43657 11.9166 3.99867 11.9166C4.56049 11.9166 5.11081 11.7781 5.60227 11.5171L3.99825 6.70504ZM13.9983 6.70504L12.3944 11.5167C12.886 11.778 13.4366 11.9166 13.9987 11.9166C14.5605 11.9166 15.1108 11.7781 15.6023 11.5171L13.9983 6.70504Z" fill="#092C4F"/>
+          </svg>
+          <span class="visually-hidden">Сравнение</span>
+        </button>
+
+        <button class=
+                  "header-bottom__button
+                   menu-button
+                   menu-button--budge
+                   cart-modal__open-button"
+                type="button"
+                data-title="0"
+        >
+          <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.66671 0.166664C1.20647 0.166664 0.833374 0.53976 0.833374 0.999997C0.833374 1.46023 1.20647 1.83333 1.66671 1.83333H2.68335L3.35346 4.51624L4.74789 11.4901C4.86122 12.057 5.16753 12.5671 5.61468 12.9336C6.06177 13.3 6.62233 13.5001 7.20038 13.5H15.1584C15.7784 13.5 16.3762 13.2696 16.8359 12.8536C17.2955 12.4376 17.5842 11.8656 17.6459 11.2487L18.1459 6.24875C18.1807 5.90121 18.1422 5.55024 18.033 5.21847C17.9238 4.8867 17.7463 4.58149 17.512 4.32252C17.2776 4.06354 16.9916 3.85655 16.6723 3.71488C16.3531 3.57321 16.0077 3.50001 15.6584 3.5H4.8175L4.30006 1.42833C4.20978 1.06792 4.00165 0.748012 3.70874 0.519423C3.41583 0.290834 3.05492 0.166674 2.68337 0.166664H1.66671ZM6.66671 15.1667C6.20647 15.1667 5.83337 15.5398 5.83337 16C5.83337 16.4602 6.20647 16.8333 6.66671 16.8333H8.33337C8.79361 16.8333 9.16671 16.4602 9.16671 16C9.16671 15.5398 8.79361 15.1667 8.33337 15.1667H6.66671ZM13.3334 15.1667C12.8731 15.1667 12.5 15.5398 12.5 16C12.5 16.4602 12.8731 16.8333 13.3334 16.8333H15C15.4603 16.8333 15.8334 16.4602 15.8334 16C15.8334 15.5398 15.4603 15.1667 15 15.1667H13.3334ZM6.38221 11.1633L5.18317 5.16666H15.6584C15.7748 5.16667 15.8899 5.19107 15.9963 5.23829C16.1027 5.28551 16.1981 5.35451 16.2762 5.44084C16.3543 5.52716 16.4135 5.6289 16.4499 5.73949C16.4863 5.85008 16.4991 5.96707 16.4875 6.08291L15.9875 11.0829C15.967 11.2885 15.8707 11.4792 15.7175 11.6179C15.5643 11.7565 15.365 11.8333 15.1584 11.8333H7.19972C7.007 11.8334 6.82021 11.7667 6.67115 11.6445C6.5221 11.5224 6.41998 11.3523 6.38221 11.1633Z" fill="#092C4F"/>
+          </svg>
+          <span class="visually-hidden">Корзина</span>
+        </button>
+
+        <div class="cart-modal modal">
+          <div class="cart-modal__inner">
+            <button class="cart-modal__close-button modal__button-close">
+              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.425489 0.425463C0.881101 -0.0301496 1.61979 -0.0301494 2.0754 0.425462L9.50003 7.85008L16.9246 0.425462C17.3803 -0.0301489 18.1189 -0.0301496 18.5746 0.425463C19.0302 0.881075 19.0302 1.61977 18.5746 2.07538L11.1499 9.5L18.5746 16.9246C19.0302 17.3802 19.0302 18.1189 18.5746 18.5745C18.1189 19.0301 17.3803 19.0301 16.9246 18.5745L9.50003 11.1499L2.0754 18.5745C1.61979 19.0301 0.881101 19.0301 0.425489 18.5745C-0.0301234 18.1189 -0.0301231 17.3802 0.425489 16.9246L7.85011 9.5L0.425489 2.07538C-0.0301231 1.61977 -0.0301234 0.881075 0.425489 0.425463Z" fill="#C0C0C0"/>
+              </svg>
+
+              <span class="visually-hidden">Кнопка закрытия</span>
+            </button>
+
+            <header class="cart-modal__header">
+              <p class="cart-modal__title h1">В корзине нет товаров</p>
+              <p class="cart-modal__description text__primary">Посмотрите предложения на главной странице или воспользуйтесь каталогом</p>
+            </header>
+
+            <div class="cart-modal__buttons">
+              <a href="equipment.html" class="cart-modal__button button button__medium">Каталог товаров</a>
+              <a href="index.html" class="cart-modal__button button button__medium button__medium--transparent">Главная</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <main class="content">
+    <div class="wrapper wrapper__to-bottom">
+      <div class="breadcrumbs container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="/" class="breadcrumbs__link text__primary">
+              <span>Каталог</span>
+
+              <span class="breadcrumbs__divider">
+                <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.762294 0.387294C0.945352 0.204235 1.24215 0.204235 1.42521 0.387294L5.17521 4.13729C5.35826 4.32035 5.35826 4.61715 5.17521 4.80021L1.42521 8.55021C1.24215 8.73326 0.945352 8.73326 0.762294 8.55021C0.579235 8.36715 0.579235 8.07035 0.762294 7.88729L4.18084 4.46875L0.762294 1.05021C0.579235 0.867148 0.579235 0.570352 0.762294 0.387294Z" fill="#1D1D1D"/>
+                </svg>
+              </span>
+            </a>
+          </li>
+
+          <li class="breadcrumbs__item">
+            <a href="/" class="breadcrumbs__link text__primary">
+              <span>Оборудование</span>
+
+              <span class="breadcrumbs__divider">
+                <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.762294 0.387294C0.945352 0.204235 1.24215 0.204235 1.42521 0.387294L5.17521 4.13729C5.35826 4.32035 5.35826 4.61715 5.17521 4.80021L1.42521 8.55021C1.24215 8.73326 0.945352 8.73326 0.762294 8.55021C0.579235 8.36715 0.579235 8.07035 0.762294 7.88729L4.18084 4.46875L0.762294 1.05021C0.579235 0.867148 0.579235 0.570352 0.762294 0.387294Z" fill="#1D1D1D"/>
+                </svg>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="equipment container">
+        <h1 class="equipment__title" data-count="18">Оборудование</h1>
+
+        <div class="equipment__inner">
+          <div class="equipment__category">
+            <form action="" class="equipment__form">
+              <div class="equipment__form-filters">
+                <label for="category" class="visually-hidden">Категория</label>
+                <select name="category" id="category" class="equipment__form-filter">
+                  <option value="category" disabled selected>Категория</option>
+                  <option value="13">Аппарат</option>
+                  <option value="2">Киоск</option>
+                  <option value="3">Модуль</option>
+                </select>
+
+                <label for="price" class="visually-hidden">Цена</label>
+                <select name="price" id="price" class="equipment__form-filter">
+                  <option value="price" disabled selected>Цена</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                </select>
+
+                <label for="value" class="visually-hidden">Объем бака</label>
+                <select name="value" id="value" class="equipment__form-filter">
+                  <option value="value" disabled selected>Объем бака</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                </select>
+
+                <label for="source" class="visually-hidden">Источник воды</label>
+                <select name="source" id="source" class="equipment__form-filter">
+                  <option value="source" disabled selected>Источник воды</option>
+                  <option value="16">Артезианская вода</option>
+                  <option value="2">Подключение к водопроводу</option>
+                </select>
+
+                <label for="placement" class="visually-hidden">Размещение</label>
+                <select name="placement" id="placement" class="equipment__form-filter">
+                  <option value="placement" disabled selected>Размещение</option>
+                  <option value="16">Внутри помещения</option>
+                  <option value="2">Уличное</option>
+                </select>
+
+                <label for="type" class="visually-hidden">Тип аппарата</label>
+                <select name="type" id="type" class="equipment__form-filter">
+                  <option value="type" disabled selected>Тип аппарата</option>
+                  <option value="15">Моноблок</option>
+                  <option value="3">Раздельные блоки (розлив + очистка)</option>
+                </select>
+              </div>
+
+              <button class="equipment__form-button text__small" type="button">
+                <span>Рекомендуем</span>
+
+                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.06185 0.562928L6.56173 3.06281C6.73402 3.2351 6.73402 3.51444 6.56173 3.68673C6.38944 3.85902 6.1101 3.85902 5.93781 3.68673L4.19095 1.93986V12.1248C4.19095 12.3684 3.99343 12.5659 3.74977 12.5659C3.50612 12.5659 3.30859 12.3684 3.30859 12.1248V1.93986L1.56173 3.68673C1.38944 3.85902 1.1101 3.85902 0.937811 3.68673C0.765521 3.51444 0.765521 3.2351 0.937811 3.06281L3.43769 0.562928C3.43773 0.562889 3.43777 0.56285 3.43781 0.562811C3.43844 0.562188 3.43906 0.561566 3.43969 0.560946C3.48155 0.519573 3.52963 0.488281 3.5809 0.467069C3.63291 0.445499 3.68995 0.433594 3.74977 0.433594C3.86186 0.433594 3.97395 0.476044 4.05985 0.560946C4.06048 0.561565 4.06111 0.562187 4.06173 0.562811C4.06177 0.56285 4.06181 0.562889 4.06185 0.562928ZM11.2498 0.433594C11.4934 0.433594 11.6909 0.631115 11.6909 0.87477V11.0597L13.4378 9.31281C13.6101 9.14052 13.8894 9.14052 14.0617 9.31281C14.234 9.4851 14.234 9.76444 14.0617 9.93673L11.5617 12.4367C11.5194 12.479 11.4707 12.5109 11.4186 12.5325C11.3666 12.554 11.3096 12.5659 11.2498 12.5659C11.19 12.5659 11.1329 12.554 11.0809 12.5325C11.0289 12.5109 10.9801 12.479 10.9378 12.4367L8.43781 9.93673C8.26552 9.76444 8.26552 9.4851 8.43781 9.31281C8.6101 9.14052 8.88944 9.14052 9.06173 9.31281L10.8086 11.0597V0.87477C10.8086 0.631115 11.0061 0.433594 11.2498 0.433594Z" fill="#1D1D1D"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+
+          <ul class="equipment__list">
+            <li class="equipment__item">
+              
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+  <footer class="footer container text__primary">
+    <div class="footer__content">
+      <img
+        src="images/logo-footer.svg"
+        alt="Наш логотип"
+        class="footer__logo"
+        width="120" height="120" loading="lazy"
+      >
+
+      <div class="footer__links">
+        <nav class="footer__menu">
+          <p class="footer__title">Меню</p>
+
+          <ul class="footer__menu-list text__primary">
+            <li class="footer__menu-item">
+              <a href="/" class="footer__menu-link">О нас</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="/" class="footer__menu-link">Доставка и оплата</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="/" class="footer__menu-link">Отзывы</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="/" class="footer__menu-link">Блог</a>
+            </li>
+            <li class="footer__menu-item">
+              <a href="/" class="footer__menu-link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="footer__contacts">
+          <p class="footer__title text__primary">Меню</p>
+
+          <address class="footer__contacts-body">
+            <p>614002, Россия, Пермь, Чернышевского, 15а, оф. 7</p>
+            <div class="footer__contacts-links">
+              <a href="tel:88005519071">8 800 551-90-71</a>
+              <a href="mailto:alivewater@mail.ru">alivewater@mail.ru</a>
+            </div>
+          </address>
+
+          <div class="footer__soc1als soc1als">
+            <ul class="soc1als__list">
+              <li class="soc1als__item">
+                <a href="https://www.youtube.com/channel/UCeAAEGKZmxfABrZ-dbbWuug" class="soc1als__link">
+                  <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.5838 2.42533C19.4706 2.02136 19.25 1.65562 18.9455 1.367C18.6324 1.0695 18.2487 0.856693 17.8305 0.748664C16.2655 0.336164 9.99551 0.336164 9.99551 0.336164C7.38162 0.306424 4.76837 0.437226 2.17051 0.72783C1.75234 0.843841 1.36932 1.0614 1.05551 1.36116C0.747181 1.65783 0.523848 2.02366 0.407181 2.4245C0.126925 3.93428 -0.00924233 5.46728 0.000514319 7.00283C-0.00948568 8.537 0.126348 10.0695 0.407181 11.5812C0.521348 11.9803 0.743848 12.3445 1.05301 12.6387C1.36218 12.9328 1.74718 13.1453 2.17051 13.2578C3.75635 13.6695 9.99551 13.6695 9.99551 13.6695C12.6127 13.6993 15.2293 13.5685 17.8305 13.2778C18.2487 13.1698 18.6324 12.957 18.9455 12.6595C19.2499 12.3709 19.4702 12.0051 19.583 11.6012C19.8706 10.092 20.0104 8.55832 20.0005 7.022C20.0221 5.47917 19.8825 3.9383 19.5838 2.4245V2.42533ZM8.00218 9.85616V4.15033L13.2188 7.00366L8.00218 9.85616Z" fill="#E0EEFB"/>
+                  </svg>
+
+                  <span class="visually-hidden">Мы в Youtube</span>
+                </a>
+              </li>
+              <li class="soc1als__item">
+                <a href="https://vk.com/alivewater_ru" class="soc1als__link">
+                  <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5417 0.954062C19.68 0.499062 19.5417 0.164062 18.8792 0.164062H16.6917C16.135 0.164062 15.8783 0.453229 15.7392 0.772396C15.7392 0.772396 14.6267 3.43573 13.0508 5.16573C12.5408 5.6674 12.3092 5.82656 12.0308 5.82656C11.8917 5.82656 11.6825 5.6674 11.6825 5.21156V0.954062C11.6825 0.407396 11.5292 0.164062 11.0658 0.164062H7.62583C7.27833 0.164062 7.06917 0.417396 7.06917 0.658229C7.06917 1.17573 7.8575 1.29573 7.93833 2.7524V5.9174C7.93833 6.61156 7.81083 6.7374 7.5325 6.7374C6.79083 6.7374 4.98667 4.06156 3.91583 0.999896C3.70833 0.404062 3.49833 0.164062 2.93917 0.164062H0.75C0.125 0.164062 0 0.453229 0 0.772396C0 1.34073 0.741667 4.16406 3.45417 7.89823C5.2625 10.4482 7.80833 11.8307 10.1275 11.8307C11.5183 11.8307 11.69 11.5241 11.69 10.9949V9.0674C11.69 8.45323 11.8217 8.33073 12.2625 8.33073C12.5875 8.33073 13.1433 8.49073 14.4417 9.71989C15.925 11.1774 16.1692 11.8307 17.0042 11.8307H19.1917C19.8167 11.8307 20.13 11.5241 19.95 10.9174C19.7517 10.3141 19.0433 9.43823 18.1042 8.39906C17.5942 7.8074 16.8292 7.1699 16.5967 6.85073C16.2725 6.44156 16.365 6.25906 16.5967 5.8949C16.5967 5.8949 19.2633 2.20656 19.5408 0.954062H19.5417Z" fill="#E0EEFB"/>
+                  </svg>
+
+                  <span class="visually-hidden">Мы во Vk</span>
+                </a>
+              </li>
+              <li class="soc1als__item">
+                <a href="https://ok.ru/group/61091529687181" class="soc1als__link">
+                  <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.69817 12.355C7.60295 12.1473 8.46363 11.7913 9.24886 11.2983C9.83912 10.903 9.99903 10.1061 9.60323 9.51369C9.22442 8.94628 8.46628 8.77467 7.87975 9.1232C6.07285 10.2522 3.77611 10.2522 1.96922 9.1232C1.37152 8.74439 0.577256 8.92396 0.198451 9.52113C0.198451 9.52378 0.198451 9.52378 0.198451 9.52378C-0.180354 10.1247 -0.000780337 10.9184 0.600101 11.2945L0.602226 11.2972C1.38587 11.7902 2.24655 12.1467 3.14814 12.3518L0.693607 14.8058C0.192607 15.2988 0.185169 16.1005 0.674481 16.6021L0.696263 16.6239C0.940122 16.8751 1.26952 17 1.59891 17C1.92831 17 2.25717 16.8751 2.5005 16.6239L4.92475 14.2134L7.33465 16.627C7.84681 17.1164 8.6602 17.1052 9.15323 16.5936C9.63404 16.0958 9.63404 15.3063 9.15323 14.8085L6.69817 12.355ZM4.92422 8.77467C7.34846 8.77202 9.30996 6.80946 9.31262 4.3884C9.31262 1.97 7.34262 0 4.92422 0C2.50581 0 0.535816 1.97 0.535816 4.3884C0.538472 6.81264 2.50316 8.77467 4.92422 8.77733V8.77467ZM4.92422 2.57354C5.92568 2.57354 6.73908 3.38693 6.73908 4.3884C6.73908 5.39306 5.92568 6.20379 4.92422 6.20698C3.92275 6.20433 3.10935 5.39306 3.1067 4.3884C3.10935 3.38693 3.92275 2.57354 4.92422 2.57088V2.57354Z" fill="#E0EEFB"/>
+                  </svg>
+
+                  <span class="visually-hidden">Мы в Ok</span>
+                </a>
+              </li>
+              <li class="soc1als__item">
+                <a href="https://t.me/alivewater" class="soc1als__link">
+                  <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6223 15.3344C14.8638 15.5054 15.175 15.5481 15.4525 15.4431C15.7301 15.3374 15.9341 15.1004 15.9956 14.8131C16.6473 11.7501 18.2283 3.99736 18.8216 1.21111C18.8666 1.00111 18.7916 0.782862 18.6266 0.642611C18.4616 0.502361 18.2328 0.461861 18.0288 0.537611C14.8841 1.70161 5.19929 5.33537 1.24078 6.80012C0.989533 6.89312 0.826033 7.13462 0.834283 7.39937C0.843283 7.66487 1.02178 7.89512 1.27903 7.97237C3.05429 8.50337 5.38454 9.24212 5.38454 9.24212C5.38454 9.24212 6.47354 12.5309 7.04129 14.2034C7.11254 14.4134 7.27679 14.5784 7.49354 14.6354C7.70954 14.6916 7.94054 14.6324 8.10179 14.4801C9.01379 13.6191 10.4238 12.2879 10.4238 12.2879C10.4238 12.2879 13.1028 14.2521 14.6223 15.3344ZM6.36479 8.82662L7.62404 12.9801L7.90379 10.3499C7.90379 10.3499 12.769 5.96162 15.5426 3.46036C15.6236 3.38686 15.6348 3.26386 15.5673 3.17761C15.5006 3.09136 15.3776 3.07111 15.2853 3.12961C12.0708 5.18237 6.36479 8.82662 6.36479 8.82662Z" fill="#E0EEFB"/>
+                  </svg>
+
+                  <span class="visually-hidden">Мы в Telegram</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__copyright">
+      <div class="footer__copyright-content">
+        <small class="footer__copyright-text text__primary">© Живая Вода, <time datetime="2022">2022</time></small>
+        <div class="footer__copyright-countries">
+          Казахстан
+          <svg width="1" height="15" viewBox="0 0 1 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M0 15V0H1V15H0Z" fill="#E0EEFB"/>
+          </svg>
+          Беларусь
+        </div>
+      </div>
+
+      <div class="footer__copyright-links">
+        <a href="/" class="footer__copyright-political">
+          Политика конфиденциальности
+        </a>
+        <a href="/" class="footer__copyright-agreement">Пользовательское соглашение</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="back-to-top-button" id="back-to-top-button">
+    <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.820352 10.9296C0.393216 10.5025 0.393216 9.80999 0.820352 9.38285L9.57035 0.632851C9.67522 0.527985 9.79608 0.448866 9.92508 0.395491C10.0521 0.342802 10.1913 0.313375 10.3372 0.312517C10.3394 0.312506 10.3416 0.3125 10.3438 0.3125C10.3459 0.3125 10.3481 0.312506 10.3503 0.312517C10.4962 0.313375 10.6354 0.342802 10.7624 0.395491C10.8914 0.448866 11.0123 0.527985 11.1171 0.632851L19.8671 9.38285C20.2943 9.80999 20.2943 10.5025 19.8671 10.9296C19.44 11.3568 18.7475 11.3568 18.3204 10.9296L11.4375 4.04679L11.4375 21.4062C11.4375 22.0103 10.9478 22.5 10.3438 22.5C9.73969 22.5 9.25 22.0103 9.25 21.4062L9.25 4.04679L2.36715 10.9296C1.94001 11.3568 1.24749 11.3568 0.820352 10.9296Z" fill="#5C5C5C"/>
+    </svg>
+  </div>
+</body>
+</html>

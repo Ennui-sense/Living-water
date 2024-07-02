@@ -1,3 +1,6 @@
+//Класс для позиционирования блоков в отзывах
+//Тоже довольно креативное решение, как по мне
+
 .reviews {
   overflow-y: hidden;
   display: grid;
@@ -8,14 +11,15 @@
     "video-2 card-2 card-2 card-3"
     "card-4 card-4 video-3 video-3";
 
+
   @include desktop {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     grid-template-areas:
-    "card-1 video-1"
-    "video-2 card-2"
-    "card-3 video-3"
-    "card-4 card-4";
+      "card-1 video-1"
+      "video-2 card-2"
+      "card-3 video-3"
+      "card-4 card-4";
   }
 
   @include mobile {
@@ -24,13 +28,15 @@
     overflow-x: scroll;
   }
 
+
   &__card {
+    height: 100%;
+    min-width: 400px;
+
+
     @include mobile {
       scroll-snap-align: start;
     }
-
-    height: 100%;
-    min-width: 400px;
 
     &:nth-child(1) {
       grid-area: card-1;

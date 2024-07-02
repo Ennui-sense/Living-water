@@ -1,0 +1,55 @@
+.equipment {
+  &__title {
+    display: flex;
+    align-items: start;
+    column-gap: 15px;
+    margin-bottom: 50px;
+
+    &::after {
+      content: "/ " attr(data-count) " шт.";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 15px;
+      letter-spacing: -0.01px;
+      color: var(--color-gray60);
+    }
+  }
+
+  &__category {
+    margin-bottom: 30px;
+  }
+
+  &__form {
+    @include flex-sb;
+
+    &-filters {
+      display: flex;
+      column-gap: 10px;
+    }
+
+    &-button {
+      @include reset-button;
+
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+      background-color: var(--color-gray100);
+      height: var(--select-height);
+      padding-inline: 15px;
+      border-radius: var(--border-radius-small);
+
+      @include hover {
+        background-color: var(--color-gray90);
+      }
+
+      &:active {
+        background-color: var(--color-gray60);
+        color: var(--color-light);
+
+        svg * {
+          fill: var(--color-light);
+        }
+      }
+    }
+  }
+}

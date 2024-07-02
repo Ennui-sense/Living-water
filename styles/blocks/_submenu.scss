@@ -1,0 +1,67 @@
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: -30px;
+  padding: 30px 20px;
+  box-shadow: 0px 8px 16px 0px hsla(210, 80%, 17%, 0.12);
+  background-color: var(--color-light);
+  border-radius: 0 0 var(--border-radius-medium) var(--border-radius-medium);
+  z-index: 8;
+  display: none;
+
+  &.open {
+    display: block;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  &__link {
+    padding: 10px;
+    display: flex;
+    align-items: start;
+    column-gap: 15px;
+    border-radius: var(--border-radius-small);
+
+    &.disabled {
+      opacity: 0.3;
+    }
+
+    //Для активных ссылок устанавливаем cursor: pointer и эффекты наведения/клика
+    &:not(:where(.disabled)) {
+      cursor: pointer;
+      transition-duration: var(--transition-duration-long);
+
+      @include hover {
+        background-color: var(--color-gray100);
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+
+    &-icon-wrapper {
+      @include square(50px);
+      @include flex-center(true);
+
+      background-color: var(--color-gray100);
+      border-radius: var(--border-radius-small);
+    }
+
+    &-body {
+      padding-block: 5px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 5px;
+      width: 255px;
+    }
+
+    &-description {
+      opacity: 0.8;
+    }
+  }
+}

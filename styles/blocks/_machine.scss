@@ -2,6 +2,9 @@
   position: relative;
   max-height: 690px;
 
+  //Долго думал и искал решение добавления слоя с цветом поверх
+  //Решил оставить этот вариант
+  //По сути просто растянутый на весь размер видео слой с bbm: overlay
   &::before {
     content: "";
     position: absolute;
@@ -16,14 +19,6 @@
     background-color: hsla(0, 0%, 11%, 0.7);
     background-blend-mode: overlay;
     transition-duration: var(--transition-duration);
-  }
-
-  @include tablet-above {
-    @include hover {
-      .machine__button {
-        display: flex;
-      }
-    }
   }
 
   @include hover {
@@ -54,14 +49,5 @@
     left: 50%;
     translate: -50% -50%;
     z-index: 2;
-
-    @include tablet-above {
-      display: none;
-      opacity: 0.8;
-
-      @include hover {
-        opacity: 1;
-      }
-    }
   }
 }

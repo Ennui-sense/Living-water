@@ -4,6 +4,7 @@ body {
   color: var(--color-accent-light);
   background-color: var(--color-accent-dark);
 
+  //Блокируем скролл основной страницы при открытии модальных окон
   &.modal-open {
     overflow: hidden;
   }
@@ -31,11 +32,15 @@ h3, h4, h5, h6 {
   font-weight: 500;
 }
 
+//В макете есть элементы, которые повторяют параметры h1
+//Чтобы не дублировать код и не нарушать порядок следования заголовков,
+//просто создал классы под h1 и h2
 h1, .h1 {
   @include fluid-text(64, 50);
 
   line-height: 60px;
   letter-spacing: -0.03em;
+
 
   @include mobile {
     line-height: 45px;

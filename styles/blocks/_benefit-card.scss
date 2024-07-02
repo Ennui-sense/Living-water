@@ -3,6 +3,7 @@
   border-radius: var(--border-radius-medium);
   height: 290px;
 
+
   @include tablet {
     padding-inline: 20px;
     height: 340px;
@@ -12,9 +13,10 @@
     height: 265px;
   }
 
+
   &__icon {
     @include square(50px);
-    @include flex-center;
+    @include flex-center(true);
 
     margin-bottom: 30px;
   }

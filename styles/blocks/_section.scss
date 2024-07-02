@@ -51,6 +51,7 @@
       margin-right: 0;
     }
 
+
     @include desktop {
       margin-right: 0;
     }
@@ -81,7 +82,7 @@
 
   &__button {
     @include mobile-s {
-      width: 100%;
+      width: 50%;
     }
   }
 }

@@ -9,6 +9,7 @@
   background-color: var(--color-accent-light);
   border-radius: var(--border-radius-large);
 
+
   @include mobile {
     height: 455px;
     row-gap: 20px;
@@ -16,6 +17,7 @@
 
   &__title {
     @include fluid-text(48, 35);
+
 
     @include mobile {
       line-height: 35px;

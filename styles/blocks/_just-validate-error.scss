@@ -1,3 +1,5 @@
+//Специальный класс для редактирования ошибок с помощью just-validate
+
 .just-validate-error {
   &-wrapper {
     display: flex;
@@ -22,8 +24,9 @@
     font-size: 12px;
     line-height: 13px;
     letter-spacing: 0.01em;
-    color: rgba(192, 192, 192, 1);
+    color: var(--color-gray80);
 
+    //Иконку крестика решил добавить через ::before, но почему-то на телефоне они не отображаются
     &::before {
       @include square(15px);
 

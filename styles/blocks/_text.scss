@@ -1,3 +1,7 @@
+//Файл под стили текста (дал названия такие, как в макете)
+//Модификаторами сделал небольшие различия в привычных 5 классах
+
+
 .text {
   &__x-small {
     font-size: 12px;
@@ -8,18 +12,39 @@
   &__small {
     font-size: 14px;
     line-height: 15px;
+
+    &--medium {
+      font-weight: 500;
+    }
+
+    &--regular {
+      line-height: 20px;
+    }
   }
 
   &__primary {
     font-size: 16px;
     letter-spacing: -0.02em;
     line-height: 25px;
+
+    &--medium {
+      font-weight: 500;
+      line-height: 20;
+    }
+
+    &--regular {
+      line-height: 20;
+    }
   }
 
   &__medium {
     font-size: 18px;
     line-height: 25px;
     letter-spacing: -0.02em;
+
+    &--semi-bold {
+      font-weight: 600;
+    }
   }
 
   &__large {

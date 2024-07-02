@@ -6,6 +6,7 @@
   background-color: var(--color-light);
   border-radius: var(--border-radius-large);
 
+
   @include tablet {
     padding-right: 30px;
   }
@@ -16,12 +17,14 @@
     padding-right: 0;
   }
 
+  
   &__image {
     max-width: 630px;
     width: 56%;
     height: 540px;
     object-fit: cover;
     border-radius: var(--border-radius-large);
+
 
     @include desktop {
       height: 400px;
@@ -41,6 +44,7 @@
   &__body {
     max-width: 410px;
 
+
     @include mobile {
       padding: 50px 30px;
     }
@@ -48,7 +52,7 @@
 
   &__number {
     @include square(35px);
-    @include flex-center;
+    @include flex-center(true);
 
     border-radius: 50%;
     background-color: var(--color-accent-light);

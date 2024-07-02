@@ -9,9 +9,15 @@
     opacity: 0.8;
   }
 
-  @include hover {
-    .news-card__image {
-      background-size: 150%;
+
+  //Эффект приближения только для устройств, ширина экранов которых больше 767px
+  @include mobile-above {
+    @include hover {
+      .news-card__image {
+
+        //!important пришлось указать, так как изображения размещенные через html имели больший приоритет
+        background-size: 150% !important;
+      }
     }
   }
 
@@ -27,12 +33,10 @@
     height: 300px;
     min-width: 400px;
     width: 100%;
-    //object-fit: cover;
-    //object-position: center;
+    background-size: 120% !important;
     border-radius: var(--border-radius-medium) 0 0 var(--border-radius-medium);
-    background: url("../../images/news/1.svg") center/cover no-repeat;
-    background-size: 100%;
     transition: background-size var(--transition-duration);
+
 
     @include mobile {
       border-radius: var(--border-radius-medium) var(--border-radius-medium) 0 0;
@@ -41,6 +45,12 @@
 
   &__body {
     padding: 55px 30px;
+
+
+    @include tablet {
+      min-width: 320px;
+      width: 100%;
+    }
 
     @include mobile {
       padding-block: 50px;
@@ -51,6 +61,11 @@
     height: 130px;
     width: 420px;
     margin-bottom: 35px;
+
+
+    @include desktop {
+      width: 520px;
+    }
 
     @include tablet {
       width: 100%;

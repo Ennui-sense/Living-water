@@ -1,0 +1,142 @@
+//ТУТ ПИЗДЕЦ ДЕБРИ, С ЭТИМ Я ВООБЩЕ НЕ ЗНАЮ, КАК РАЗОБРАТЬСЯ
+
+.choices {
+  border: 1px solid var(--color-gray80);
+  border-radius: var(--border-radius-small);
+  margin-bottom: 0;
+  height: var(--select-height);
+
+  @include hover {
+    border-color: var(--color-dark);
+  }
+
+  &__inner {
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    border: none;
+
+    &--dropdown{
+      width: 280px;
+      box-shadow: 0 8px 16px 0 hsla(210, 80%, 17%, 0.12);
+      border-radius: var(--border-radius-small);
+      padding: 20px 15px;
+
+      &.is-active {
+        border: none
+      }
+    }
+
+    &--single {
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+    }
+  }
+
+  &__item {
+    border: none;
+    padding: 20px 15px;
+    font-size: 14px;
+    line-height: 15px;
+
+    &--selectable {
+      padding: 0;
+    }
+
+    &--choice {
+
+    }
+  }
+
+  &.is-flipped {
+    border: 1px solid var(--color-accent);
+  }
+
+  &[data-type*=select-one] {
+    display: flex;
+
+    .choices__inner {
+      padding: 0;
+    }
+
+    &:after,
+    &.is-open:after {
+      @include flex-center;
+
+      content: "";
+      width: 8.5px;
+      height: 5px;
+      background: url("../../images/icons/arrow-down.svg") center/cover no-repeat;
+      border: 1px solid red;
+      position: relative;
+    }
+
+    &.is-open:after {
+      rotate: 180deg;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //margin: 0;
+  //width: 100%;
+  //border: 1px solid var(--color-gray80);
+  //border-radius: var(--border-radius-small);
+  //
+  //&[data-type*=select-one] {
+  //  .choices__inner {
+  //    padding-bottom: 0;
+  //  }
+  //}
+  //
+  //&__inner {
+  //  display: flex;
+  //  align-items: center;
+  //  column-gap: 5px;
+  //  padding: 0 15px;
+  //  height: var(--select-height);
+  //}
+  //
+  //&[data-type*=select-one] {
+  //  display: flex;
+  //  align-items: center;
+  //  column-gap: 5px;
+  //}
+  //
+  //&[data-type*=select-one]:after,
+  //&[data-type*=select-one].is-open:after{
+
+  //}
+  //
+  //&.is-focused {
+  //  display: flex;
+  //  flex-direction: column;
+  //}
+  //
+  //&__list {
+  //  display: flex;
+  //  flex-direction: column;
+  //}

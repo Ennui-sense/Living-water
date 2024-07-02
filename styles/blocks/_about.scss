@@ -1,8 +1,8 @@
 .about {
   &__image {
     width: 100%;
-    min-height: 371px;
     height: auto;
+    min-height: 371px;
     border-radius: var(--border-radius-large);
     object-fit: cover;
   }

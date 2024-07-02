@@ -7,12 +7,30 @@
   border-radius: 50%;
   cursor: pointer;
 
+  @include hover {
+    .play-button__icon-play *,
+    .play-button__icon-pause * {
+      fill: var(--color-accent-dark);
+    }
+  }
+
   &:active {
-    background-color: hsla(0, 0%, 99%, 0.6);
+    .play-button__icon-play,
+    .play-button__icon-pause {
+      opacity: 0.6;
+    }
   }
 
   &__icon-wrapper {
-    @include square(35px);
-    @include flex-center;
+    @include square(50px);
+    @include flex-center(true);
+  }
+
+  &__icon-play {
+    display: block;
+  }
+
+  &__icon-pause {
+    display: none;
   }
 }

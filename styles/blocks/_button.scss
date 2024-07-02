@@ -9,23 +9,57 @@
     background-color: var(--color-accent-hover);
   }
 
+  //Через opacity прозрачность задавалась для всей кнопки, поэтому просто через rgba менял ее
   &:active {
       color: rgba(253, 253, 253, 0.6)
   }
 
+  //Чтобы не плодить большое количество классов, параметры самого текста решил задать тоже здесь
   &__small {
+    @include flex-center(true);
+
     border-radius: var(--border-radius-small);
     height: var(--button-height-small);
     padding-inline: 8px;
+    font-size: 12px;
+    line-height: 13px;
+    letter-spacing: 0.01em;
+  }
+
+  &__medium,
+  &__large {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: -0.02em;
   }
 
   &__medium {
+    @include flex-center(true);
+
     border-radius: var(--border-radius-small);
     height: var(--button-height-medium);
     padding-inline: 30px;
+
+    &--transparent {
+      background-color: transparent;
+      color: var(--color-accent);
+      border: 1px solid var(--color-accent);
+
+      @include hover {
+        background-color: var(--color-accent-hover);
+        color: var(--color-light);
+      }
+
+      &:active {
+        color: rgba(253, 253, 253, 0.6)
+      }
+    }
   }
 
   &__large {
+    @include flex-center(true);
+
     border-radius: var(--border-radius-medium);
     height: var(--button-height-large);
     padding-inline: 40px;

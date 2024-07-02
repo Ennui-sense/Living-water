@@ -4,6 +4,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 40px 30px;
 
+
     @include tablet {
       grid-template-columns: repeat(2, 1fr);
     }

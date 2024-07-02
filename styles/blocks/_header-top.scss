@@ -11,6 +11,7 @@
     color: var(--color-light);
     opacity: 0.8;
 
+    //Прижатие второй ссылки к левому краю
     &:nth-child(2) {
       margin-left: auto;
     }

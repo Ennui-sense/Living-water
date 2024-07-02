@@ -12,8 +12,10 @@
     padding-block: 150px;
   }
 
+
   &__body {
     max-width: 520px;
+
 
     @include tablet {
       margin-inline: auto;
@@ -35,6 +37,7 @@
     height: auto;
     margin-right: calc(-1 * (1440px - var(--container-width)) / 2);
 
+
     @include desktop {
       width: 50%;
     }
@@ -47,6 +50,10 @@
 
 // ПРИЖАТИЕ ИЗОБРАЖЕНИЯ К ПРАВОМУ КРАЮ
 
+//Это вот я вообще хз, как можно было реализовать
+//Если я указываю значение 100vw (в моей голове все работает правильно),
+//то появлятся горизонтальный скролл
+//Все эти проблемы из-за вертикальной полосы прокрутки, но как это пофиксить я не знаю
 @media (max-width: 1440px) {
   .hero__image {
     margin-right: calc(-1 * (98.8vw - var(--container-width)) / 2);

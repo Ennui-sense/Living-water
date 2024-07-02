@@ -1,15 +1,12 @@
 .menu-button {
   @include reset-button;
   @include square(40px);
-  @include flex-center;
+  @include flex-center(true);
 
   background-color: var(--color-accent-light);
   border-radius: var(--border-radius-small);
 
-  &:where(:not(.menu-button--disabled)) {
-    cursor: pointer;
-  }
-
+  //Эффект наведения и клика, а также cursor: pointer лишь для кнопок, которые активны
   @include hover {
     &:where(:not(.menu-button--disabled)) {
       svg * {
@@ -18,20 +15,25 @@
     }
   }
 
-  &:where(:not(.menu-button--disabled)):active {
-    svg * {
-      opacity: 0.6;
+  &:where(:not(.menu-button--disabled)) {
+    cursor: pointer;
+
+    &:active {
+      svg * {
+        opacity: 0.6;
+      }
     }
   }
 
-  &__budge {
+  //Модификатор для корзины
+  &--budge {
     position: relative;
 
     &::after {
       @include square(18px);
       @include flex-center(true);
 
-      content: attr(data-title);
+      content: attr(data-count);
       position: absolute;
       top: -6px;
       right: -4px;
@@ -69,6 +71,13 @@
       svg * {
         opacity: 0.6;
       }
+    }
+  }
+
+  &--wide-mobile {
+    @include mobile-s {
+      width: 50%;
+      height: 55px;
     }
   }
 }
